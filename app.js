@@ -1,3 +1,5 @@
+require ('dotenv').config({ silent: true })
+
 const htmlStandards = require('reshape-standard')
 const cssStandards = require('spike-css-standards')
 const jsStandards = require('spike-js-standards')
@@ -28,7 +30,7 @@ module.exports = {
   plugins: [
     new SpikeDatoCMS({
       addDataTo: locals,
-      token: 'd9565d190bb5f0eee8cf4bbf8c3875',
+      token: process.env.DATO_READ_TOKEN,
       models: [
         {
           name: 'index',

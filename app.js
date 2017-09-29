@@ -1,9 +1,13 @@
+require ('dotenv').config({ silent: true })
+
 const htmlStandards = require('reshape-standard')
 const cssStandards = require('spike-css-standards')
 const jsStandards = require('spike-js-standards')
 const pageId = require('spike-page-id')
 const sugarml = require('sugarml')
 const sugarss = require('sugarss')
+const SpikeDatoCMS = require('spike-datocms')
+const locals = {}
 const env = process.env.SPIKE_ENV
 
 module.exports = {
@@ -12,7 +16,8 @@ module.exports = {
   ignore: ['**/layout.sgr', '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
   reshape: htmlStandards({
     parser: sugarml,
-    locals: (ctx) => { return { pageId: pageId(ctx), foo: 'bar' } },
+    root: './views',
+    locals: (ctx) => { return Object.assign(locals, { pageId: pageId(ctx)} )},
     minify: env === 'production'
   }),
   postcss: cssStandards({
@@ -20,5 +25,18 @@ module.exports = {
     minify: env === 'production',
     warnForDuplicates: env !== 'production'
   }),
-  babel: jsStandards()
+  babel: jsStandards(),
+  server: { open: false },
+  plugins: [
+    new SpikeDatoCMS({
+      addDataTo: locals,
+      token: process.env.DATO_READ_TOKEN,
+      models: [
+        {
+          name: 'index',
+          json: 'index.json'
+        }
+      ]
+    })
+  ]
 }

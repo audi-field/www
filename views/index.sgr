@@ -1,29 +1,70 @@
 extends(src='layout.sgr')
   block(name='content')
-    h2 Hello World!
-    p(retext-skip) Thanks for using <a href='https://github.com/static-dev/spike'>spike</a>
-    p Example of locals: {{ foo }}
-    p(mdi) Example of **markdown**
-    p Example of "smart quotes" -- and dashes
 
-    hr
+    #bgvid-wrap
+      video(class='bgvid' poster='/img/audi-poster.jpg' autoplay loop muted)
+        source(src='/img/audiField_releaseVideo.mp4' type='video/mp4')
 
-    h3 Getting Started
-    h4 The Stack:
-    ul
-      li
-        a(href="http://github.com/reshape/reshape") reshape
-        |  for HTML transforms
-      li
-        a(href="https://babeljs.io/") babel
-        |  for JS transforms
-      li
-        a(href="http://postcss.org/") postcss
-        |  for CSS transforms
-      li
-        a(href="http://webpack.github.io") webpack
-        |  for JS bundling
+      #tinted
+        #countdown-wrap
+          header
+            h2 countdown to kick off
+          #counter
+            p#days 00: 
+            p#hours 00: 
+            p#minutes 00: 
+            p#seconds 00 
 
-    p Customize your settings by editing the
-      a(href="https://spike.readme.io/docs/appjs") app.js
-      |  file or simply start by editing this view
+    section(id="fan-exp" class='full-band  center-tab' style='background: url(https://{{ dato._meta.imgixHost + dato.fan_exp[0].bgImage.path }})no-repeat center center; background-size: cover;')
+      header
+        h2 {{ dato.stadium[0].fanExp[0].heading }}
+
+      .flex-wrapper
+
+        each(loop='item in dato.index[0].fanExp')
+
+          figure
+            h3 {{ item.heading }}
+            p {{ item.copy }}
+
+    section(id="hospitality" class='full-band  left-tab' style='background: url(https://{{ dato._meta.imgixHost + dato.index[0].premHosp[0].bgImage.path }})no-repeat center center; background-size: cover;')
+
+      header
+        h2 {{ dato.index[0].premHosp[0].heading }}
+
+      .flex-wrapper
+
+        figure
+          p {{ dato.index[0].premHosp[0].copy}}
+
+    section(id="galleries" class='right-tab')
+
+      header
+        h2 photo galleries
+      .flex-wrapper
+
+        each(loop='item in dato.index[0].photoGalleries')
+
+          figure
+            img(src='https://{{ dato._meta.imgixHost + item.featImage.path }}?fit=crop&w=800&h=400')
+
+            figcaption
+              h3 {{ item.heading }}
+        
+    section(id="construction-cam" class='full-band center-tab' style='background: url(https://{{ dato._meta.imgixHost + dato.index[0].constructionCam[0].bgImage.path }})no-repeat center center; background-size: cover;')
+      header
+        h2 {{ dato.index[0].constructionCam[0].heading }}
+      .flex-wrapper
+        h3(class='button-reg') view live feed
+
+    section(id='fast-facts' class='full-band')
+      
+      h2.header fun facts
+
+      .flex-wrapper
+
+        each(loop='item in dato.index[0].fact')
+
+          figure
+            h2 {{ item.stat }}
+            p {{ item.copy }}

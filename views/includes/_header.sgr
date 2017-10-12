@@ -1,0 +1,18 @@
+header(id='top-nav')
+  #logo
+    a(href='/')
+      img(src='/img/dcu-logo.png')
+  nav
+    #toggle
+      input(type='checkbox')
+      span  
+      span  
+      span  
+
+    ul(class='closed')
+      li: a(href='/stadium') the stadium
+      li: a(href='/fan-experience') fan experience
+      li: a(href='/news-and-media') news and media
+      li: a(href='/join-us') join us
+      li: a(href='/about') about
+      li(class='button-reg') buy tickets

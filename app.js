@@ -35,8 +35,17 @@ module.exports = {
         {
           name: 'index',
           json: 'index.json'
+        },
+        {
+          name: 'fan_exp',
+          json: 'fan-exp.json'
+        },
+        {
+          name: 'stadium',
+          json: 'stadium.json'
         }
-      ]
+      ],
+      json: 'data.json'
     })
   ]
 }

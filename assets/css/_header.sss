@@ -1,0 +1,83 @@
+header#top-nav
+  display: flex
+  flex-direction: row
+  padding: 1em 2em 0
+  position: fixed
+  width: 100%
+  z-index: 2
+  transition: all .25s ease-in
+
+  &.bg
+    background-color: #fff
+    padding: 0 2em
+
+  & #logo
+    flex: 1 1 auto 
+    
+    & img
+      width: 6em
+
+  & nav
+    flex: 1 2 auto 
+    margin: auto
+
+    & #toggle
+      position: absolute
+      top: 2em
+      right: 2em
+
+      @media(--laptop-rg)
+        display: none
+      
+      & input
+        display: block
+        position: absolute
+        top: -8px
+        right: -8px
+        width: 40px
+        height: 32px
+        cursor: pointer
+        opacity: 0
+        z-index: 5 
+
+      & span
+        display: block
+        position: relative
+        width: 25px
+        height: 2px
+        margin-bottom: 5px
+        border-radius: .2em
+        background: #004877
+        z-index: 10
+
+      @media (--laptop-rg)
+        display: none
+
+    & ul
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-end
+      text-transform: uppercase
+
+      &.closed,
+      &.open
+        position: relative
+        top: 4em
+        transition: all .5s ease-out
+
+      &.closed
+        margin-right: -12em
+
+      &.open
+        margin-rigth: 0
+
+
+      @media (--laptop-rg)
+        flex-direction: row
+
+      & li
+        margin-bottom: 1em
+
+        @media (--laptop-rg)
+          margin-bottom: 0

@@ -49,7 +49,7 @@ extends(src='layout.sgr')
             img(src='https://{{ dato._meta.imgixHost + item.featImage.path }}?fit=crop&w=800&h=400')
 
             figcaption
-              h3 {{ item.heading }}
+              h3: a(href='#') {{ item.heading }}
         
     section(id="construction-cam" class='full-band center-tab' style='background: url(https://{{ dato._meta.imgixHost + dato.index[0].constructionCam[0].bgImage.path }})no-repeat center center; background-size: cover;')
       header

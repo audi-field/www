@@ -47,11 +47,10 @@
           @media (--laptop-rg)
             flex-direction: row
 
-
           & p
             font-size: 6em
             line-height: 1em
-            margin-bottom: 0
+            margin-bottom: .25em
   
             @media (--laptop-rg)
               margin-bottom: .5em
@@ -90,80 +89,68 @@
         width: 18em
         padding: 0 1em
         text-align: center
+        top: -1px
 
         @media(--laptop-rg)
           width: 16em
 
-        &:before,
-        &:after
-          content: ' '
-          height: 0
-          width: 0
-          border-bottom: 40px solid white
-          border-left: 40px solid transparent
-          position: absolute
-
         &:before
-          left: -3.3em
-          top: -10px
-          transform: rotate(.75turn)
-
-          @media (--laptop-rg)
-            left: -2.5em
-            top: -2px
-
-        &:after
-          left: 18em
-          top: -10px
-          transform: rotate(.5turn)
-
-          @media (--laptop-rg)
-            left: 16em
-            top: 0
+          top: -8px
+          right: 50%
+          transform: translate(-50%)
+          left: 50%
+          content: ''
+          position: absolute
+          display: block
+          width: 120%
+          border: 0px solid transparent
+          border-width: 50px 25px 0 25px
+          border-top-color: white
+          z-index: -1
 
     &.left-tab
       
       & header
         left: 0
+        top: -1px
 
         &:after
-          content: ' '
-          height: 0
-          width: 0
-          border-bottom: 40px solid white
-          border-left: 40px solid transparent
+          top: -8px
+          right: 50%
+          transform: translate(-50%)
+          left: 50%
+          content: ''
           position: absolute
-          transform: rotate(.5turn)
-          top: -10px
-          left: 23em
-
-          @media(--laptop-rg)
-            top: 0
-            left: 23em
-
+          display: block
+          width: 120%
+          border: 0px solid transparent
+          border-width: 50px 25px 0 25px
+          border-top-color: white
+          z-index: -1
+        
     &.right-tab
       
       & header
         right: 0
+        top: -1px
         width: 19em
         padding: 0 1em  
         text-align: center
-        
+
         &:before
-          content: ' '
-          height: 0
-          width: 0
-          border-bottom: 40px solid white
-          border-left: 40px solid transparent
+          top: -8px
+          right: 50%
+          transform: translate(-50%)
+          left: 50%
+          content: ''
           position: absolute
-          transform: rotate(.75turn)
-          top: -10px
-          right: 19em
-
-        @media(--laptop-rg)
-          top: 0
-          rigth: 19em
-
+          display: block
+          width: 120%
+          border: 0px solid transparent
+          border-width: 50px 25px 0 25px
+          border-top-color: white
+          z-index: -1
+   
   & .full-band
     height: 75vh
     position: relative
@@ -179,12 +166,18 @@
 
   & #fan-exp
 
+    @media (--mob-sm-lnd)
+      height: 120vh
+
+    @media (--laptop-rg)
+      height: 75vh
+
     & header
       width: 18em
 
-      &:after
-        left: 18em
-        
+      @media (--mob-rg)
+        width: 20em
+
     & .flex-wrapper
       justify-content: flex-end
 
@@ -192,8 +185,12 @@
         justify-content: space-around
         padding-top: 4em
 
+      @media (--mob-sm-lnd)
+        height: 100%
+
       @media (--laptop-rg)
         justify-content: space-between
+        padding: 0
 
       & figure
         color: white
@@ -214,6 +211,9 @@
       text-align: center
       padding: 0 1em
 
+      @media (--mob-rg)
+        width: 25em
+
       @media (--laptop-rg)
         justify-content: flex-end
 
@@ -225,6 +225,14 @@
 
   & #galleries
     position: relative
+
+    & header
+
+      @media (--mob-rg)
+        width: 20em
+
+      @media (--mob-sm-lnd)
+        width: 21em
 
     & .flex-wrapper
       width: 100%
@@ -277,8 +285,14 @@
       width: 20em
       padding: 0 1em
 
+      @media (--mob-rg)
+        width: 24em
+
       &:after
         left: 20em
+
+        @media (--mob-rg)
+          left: 22em
 
       
     & .flex-wrapper
@@ -297,15 +311,20 @@
     color: white
     background-color: var(--red)
     height: 65vh
+    display: flex
+    flex-direction: column
+    justify-content: center
 
     & .header
+      flex: 1 1 auto
       max-width: 10em
-      margin: 0 auto
-      padding: 1em 0 3em 0 
+      margin: auto
       text-align: center
+      padding-top: 3em
 
     & .flex-wrapper
-      height: 75%
+      flex: 1 1 auto
+      height: 50%
       align-items: center
       justify-content: space-around
       flex-wrap: wrap

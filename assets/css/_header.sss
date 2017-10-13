@@ -8,14 +8,22 @@ header#top-nav
   transition: all .25s ease-in
 
   &.bg
-    background-color: #fff
-    padding: 0 2em
+
+    @media (--laptop-rg)
+      background-color: #fff
+    
+    & #logo
+
+      & img
+        width: 4em
+
 
   & #logo
     flex: 1 1 auto 
     
     & img
       width: 6em
+      transition: width .25s ease-in
 
   & nav
     flex: 1 2 auto 
@@ -59,6 +67,10 @@ header#top-nav
       justify-content: space-between
       align-items: flex-end
       text-transform: uppercase
+      width: 10em
+
+      @media (--laptop-rg)
+        width: 100%
 
       &.closed,
       &.open

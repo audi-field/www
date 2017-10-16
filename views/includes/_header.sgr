@@ -10,7 +10,7 @@ header(id='top-nav')
       span  
 
     ul(class='closed')
-      li: a(href='/stadium') the stadium
+      li: a(href='/the-stadium') the stadium
       li: a(href='/fan-experience') fan experience
       li: a(href='/news-and-media') news and media
       li: a(href='/join-us') join us

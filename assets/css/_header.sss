@@ -7,6 +7,13 @@ header#top-nav
   z-index: 2
   transition: all .25s ease-in
 
+  @media (--tablet-lnd)
+    width: 95%
+    padding-top: .5em
+
+  @media (--laptop-rg)
+    width: 100%
+
   &.bg
 
     @media (--laptop-rg)
@@ -15,8 +22,12 @@ header#top-nav
     & #logo
 
       & img
-        width: 4em
 
+        @media (--tablet-lnd)
+          width: 6em
+
+        @media (--laptop-rg)
+          width: 4em
 
   & #logo
     flex: 1 1 auto 
@@ -34,7 +45,7 @@ header#top-nav
       top: 2em
       right: 2em
 
-      @media (--laptop-rg)
+      @media (--tablet-lnd)
         display: none
       
       & input
@@ -58,7 +69,7 @@ header#top-nav
         background: #004877
         z-index: 10
 
-      @media (--laptop-rg)
+      @media (--tablet-lnd)
         display: none
 
     & ul
@@ -69,7 +80,7 @@ header#top-nav
       text-transform: uppercase
       width: 10em
 
-      @media (--laptop-rg)
+      @media (--tablet-lnd)
         width: 100%
 
       &.closed,
@@ -85,7 +96,7 @@ header#top-nav
         margin-rigth: 0
 
 
-      @media (--laptop-rg)
+      @media (--tablet-lnd)
         flex-direction: row
 
       & li

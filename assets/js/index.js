@@ -6,7 +6,7 @@ const checkScreenWidth = function () {
   var nav = document.querySelector('nav ul')
 
 // if window width is greater than 1280px, remove class to nav
-   if (width > 1200) {
+   if (width > 1020) {
      nav.classList.remove('open')
      nav.classList.remove('closed')
    } else {

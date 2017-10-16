@@ -1,0 +1,77 @@
+extends(src='layout.sgr')
+  block(name='content')
+
+    #hero(style='background: url(https://{{ dato._meta.imgixHost + dato.fan_exp[0].heroImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+
+    section#fan-exp.tab.left-tab.full-band(style='background: url(https://{{ dato._meta.imgixHost + dato.fan_exp[0].bgImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+
+      header
+
+        svg(viewBox='0 10 350 50')
+          defs
+            filter#shadow
+              feDropShadow(dx='0' dy='0' stdDeviation='5')
+            style .cls-1{fill: white} 
+
+          use(xlink:href='#icon-tab')
+
+        h2 {{ dato.fan_exp[0].title }}
+
+      .flex-wrapper.split-content
+
+        figure
+          h3 {{ dato.fan_exp[0].hospitality[0].header }}
+          p {{ dato.fan_exp[0].hospitality[0].copy }} 
+
+        figure
+          h3 {{ dato.fan_exp[0].premiumAreas[0].header }}
+          p {{ dato.fan_exp[0].premiumAreas[0].copy }} 
+
+    section#clubs-suites.mod-block.tab.center-tab
+
+      header
+        svg(viewBox='0 10 350 50')
+          defs
+            filter#shadow
+              feDropShadow(dx='0' dy='0' stdDeviation='5')
+            style .cls-1{fill: white} 
+
+          use(xlink:href='#icon-tab')
+
+        h2 {{ dato.fan_exp[0].clubSuites[0].header }}
+
+      .flex-wrapper
+
+        .block(style='background: url(https://{{ dato._meta.imgixHost + dato.fan_exp[0].clubSuites[0].suiteBgImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+
+          figure
+            h3 {{ dato.fan_exp[0].clubSuites[0].headerSuiteTypes }}
+            p(md) {{ dato.fan_exp[0].clubSuites[0].copySuiteTypes }}
+
+          p.button-white view gallery
+
+        .block(style='background: url(https://{{ dato._meta.imgixHost + dato.fan_exp[0].clubSuites[0].clubBgImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+
+          figure
+            h3 {{ dato.fan_exp[0].clubSuites[0].headerClubAreas }}
+            p(md) {{ dato.fan_exp[0].clubSuites[0].copyClubAreas }}
+
+          p.button-white view gallery
+
+
+    section#match-exp.full-band.tab.right-tab(style='background: url(https://{{ dato._meta.imgixHost + dato.fan_exp[0].matchdayExp[0].bgImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+
+      header
+        svg(viewBox='0 10 350 50')
+          defs
+            filter#shadow
+              feDropShadow(dx='0' dy='0' stdDeviation='5')
+            style .cls-1{fill: white} 
+
+          use(xlink:href='#icon-tab')
+
+        h2 {{ dato.fan_exp[0].matchdayExp[0].header }}
+
+      .flex-wrapper.single-block
+        figure
+          p {{ dato.fan_exp[0].matchdayExp[0].copy }} 

@@ -2,11 +2,13 @@
 @custom-media --mob-rg (min-width: 23em)
 @custom-media --mob-lg (min-width: 25.5em)
 @custom-media --mob-sm-lnd (min-width: 35em)
+@custom-media --tablet (min-width: 44em)
+@custom-media --tablet-lnd (min-width: 63em)
 @custom-media --laptop-rg (min-width: 80em)
 
 body
   font: normal 100%/150% var(--bodyFont)
-  font-size: responsive 12px 16px
+  font-size: responsive 14px 16px
 
 /* Headings */
 
@@ -59,3 +61,161 @@ ul
   bottom: .25em
   border-radius: 1em
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .5)
+  text-transform: uppercase
+
+.button-white
+  color: var(--red)
+  background-color: var(--white)
+  width: 10em
+  padding-top: .25em
+  text-align: center
+  position: relative
+  bottom: .25em
+  border-radius: 1em
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .5)
+  text-transform: uppercase
+  font-size: 1.2rem
+
+section
+  margin-bottom: 5em
+  height: 75vh 
+
+  &.center-tab,
+  &.left-tab,
+  &.right-tab
+
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    box-shadow: inset 0 5px 8px grey
+
+  &.tab
+
+    & header
+      width: 80%
+      display: flex
+      flex-direction: column
+      position: absolute
+
+      & svg
+        width: 120%
+        position: absolute
+        top: 0
+
+        @media (--mob-sm-lnd)
+          width: 80%
+          top: -2%
+
+        @media (--tablet-lnd)
+          width: 60%
+
+        @media (--laptop-rg)
+          width: 50%
+          top: 0 
+
+      & h2 
+        border-bottom: 1px solid var(--red)
+        z-index: 1
+
+    &.center-tab
+
+      & header
+        align-items: center
+
+    &.left-tab
+
+      & header
+        align-items: flex-start  
+
+        & h2
+          transform: translateX(33%)
+
+          @media (--mob-sm-lnd)
+            transform: translateX(48%)
+
+          @media (--tablet-lnd)
+            transform: translateX(58%)
+
+          @media (--laptop-rg)
+            transform: translateX(55%)
+
+    &.right-tab
+
+      & header
+        align-items: flex-end  
+        width: 90%
+        top: -1px
+
+        @media (--mob-sm-lnd)
+          width: 80%
+          top: 0
+
+        & h2
+          transform: translateX(-16%)
+
+          @media (--mob-sm-lnd)
+            transform: translateX(-26%)
+
+          @media (--tablet)
+            transform: translateX(-28%)
+
+          @media (--tablet-lnd)
+            transform: translateX(-26%)
+
+          @media (--laptop-rg)
+            transform: translateX(-26%)
+
+  &.mod-block
+    height: auto
+
+  &.full-band
+    height: 75vh
+    position: relative
+
+    & .flex-wrapper
+      display: flex
+      flex-direction: column
+      height: 100%
+      width: 90%
+      margin: auto 
+
+      @media (--laptop-rg)
+        flex-direction: row
+
+      & figure
+        color: white
+        background-color: var(--bgRed)
+        max-width: 24em 
+        padding: 2em
+
+
+    & .split-content
+
+      @media (--mob-rg)
+        justify-content: space-around
+        padding-top: 4em
+
+      @media (--mob-sm-lnd)
+        height: 100%
+
+      @media (--laptop-rg)
+        justify-content: space-between
+        padding: 0
+
+      & figure
+      
+        &:nth-of-type(1)
+          align-self: flex-end
+
+        &:nth-of-type(2)
+          align-self: flex-start
+
+    & .single-block
+      justify-content: center
+
+      @media (--laptop-rg)
+        justify-content: flex-start
+
+      & figure
+        align-self: flex-end

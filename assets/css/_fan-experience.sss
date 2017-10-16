@@ -1,0 +1,100 @@
+#fan-experience
+
+  & #top-nav
+    background-color: var(--bgWhite)
+    transition: all .25s ease-in
+
+    &.bg
+
+      @media (--laptop-rg)
+        background-color: #fff
+
+  & #hero
+    height: 100vh
+    margin-bottom: 8em
+
+  & #fan-exp
+    height: 75vh
+
+    @media (--mob-sm-lnd)
+      height: 125vh
+
+    @media (--tablet)
+      height: 55vh
+
+    @media (--tablet-lnd)
+      height: 75vh
+
+    @media (--laptop-rg)
+      height: 75vh
+
+  & #clubs-suites
+    height: auto
+    
+    & .flex-wrapper
+
+      & .block
+        display: flex
+        flex-direction: column
+        width: 90%
+        height: 65vh
+        margin: 5em auto 0
+
+        @media (--mob-sm-lnd)
+          height: 85vh
+
+        @media (--tablet)
+          height: 55vh
+          flex-direction: row
+          width: 75%
+
+        @media (--laptop-rg)
+          height: 75vh
+
+        & figure
+          color: white
+          background-color: var(--bgRed)
+          width: 90%
+          padding: 1em
+          align-self: flex-start
+
+          @media (--tablet-lnd)
+            width: 60%
+
+          @media (--laptop-rg)
+            width: 40%
+            align-self: center
+
+          & h3
+            border-bottom: 1px solid #fff
+            display: inline-block
+
+          & li
+            list-style-type: disc
+            margin-left: 1em
+
+        & .button-white
+          align-self: flex-end
+          margin: auto 2em 1em auto
+
+
+        &:nth-child(even)
+
+          & figure
+            text-align: right
+            align-self: flex-end
+          
+        
+            @media (--tablet)
+              order: 2
+              align-self: flex-start
+        
+            @media (--laptop-rg)
+              order: 2
+              align-self: center
+
+          & .button-white
+            align-self: flex-start
+            margin: auto auto 1em 2em
+
+    

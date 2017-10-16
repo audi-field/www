@@ -1,0 +1,51 @@
+extends(src='layout.sgr')
+  block(name='content')
+
+    #hero(style='background: url(https://{{ dato._meta.imgixHost + dato.stadium[0].heroImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+
+    section#site.full-band.tab.center-tab(style='background: url(https://{{ dato._meta.imgixHost + dato.stadium[0].constructionPhotoAlbum[0].featImage.path}}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+
+      header
+        svg(viewBox='0 10 350 50')
+          defs
+            filter#shadow
+              feDropShadow(dx='0' dy='0' stdDeviation='5')
+            style .cls-1{fill: white} 
+
+          use(xlink:href='#icon-tab')
+
+        h2 {{ dato.stadium[0].constructionPhotoAlbum[0].header }}
+
+      .flex-wrapper.single-block
+        figure
+          p {{ dato.stadium[0].constructionPhotoAlbum[0].copy }} 
+
+    section#gallery
+
+      each(loop='image in dato.stadium[0].constructionPhotoAlbum[0].photos')
+        figure
+          img(src='//{{ dato._meta.imgixHost + image.path }}?fit=clamp&amp;w=250&amp;h=150')
+
+    section#video
+      iframe(width='660' height='415' src='{{ dato.stadium[0].flyThroughVideoTile[0].flyThroughVideo.url }}' frameborder='0' allowfullscreen)   
+
+    section#seating.mod-block.tab.center-tab
+
+      header
+        svg(viewBox='0 10 350 50')
+          defs
+            filter#shadow
+              feDropShadow(dx='0' dy='0' stdDeviation='5')
+            style .cls-1{fill: white} 
+
+          use(xlink:href='#icon-tab')
+
+        h2 {{ dato.stadium[0].stadiumInfographic[0].header }}
+
+      .flex-wrapper
+
+        .block
+          img(src='//{{ dato._meta.imgixHost + dato.stadium[0].stadiumInfographic[0].infographic.path }}?fit=clamp&;w=1920&amp;h=1280')
+
+
+

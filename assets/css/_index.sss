@@ -1,4 +1,24 @@
 #index
+  
+  & #top-nav
+    background-color: inherit
+
+    &.bg
+
+      @media (--laptop-rg)
+        background-color: #fff
+      
+      & #logo
+
+        & img
+
+          @media (--tablet-lnd)
+            width: 6em
+
+          @media (--laptop-rg)
+            width: 4em
+
+
 
   & #bgvid-wrap
     width: 100%
@@ -237,6 +257,7 @@
 
     & .flex-wrapper
       width: 100%
+      height: auto
 
       & figure
         flex: 1 1 auto

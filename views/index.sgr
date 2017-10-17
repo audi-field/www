@@ -43,7 +43,7 @@ extends(src='layout.sgr')
         h2 photo galleries
       .flex-wrapper
 
-        each(loop='item in dato.index[0].photoGalleries')
+        each(loop='item in dato.index[0].imageGalleries')
 
           figure
             img(src='https://{{ dato._meta.imgixHost + item.featImage.path }}?fit=crop&w=800&h=400')

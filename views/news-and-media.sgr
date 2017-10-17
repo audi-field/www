@@ -1,0 +1,47 @@
+extends(src='layout.sgr')
+  block(name='content')
+
+    #hero(style='background: url(https://{{ dato._meta.imgixHost + dato.media_new[0].bgImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+
+    section#feat.tab.left-tab.full-band(style='background: url(https://{{ dato._meta.imgixHost + dato.media_new[0].featuredPressRelease[0].heroImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+
+      header
+
+        svg(viewBox='0 10 350 50')
+          defs
+            filter#shadow
+              feDropShadow(dx='0' dy='0' stdDeviation='5')
+            style .cls-1{fill: white} 
+
+          use(xlink:href='#icon-tab')
+
+        h2 {{ dato.media_new[0].title }}
+
+      .flex-wrapper.single-block
+
+        figure
+
+          h3 {{ dato.media_new[0].featuredPressRelease[0].title }} 
+          p {{ dato.media_new[0].featuredPressRelease[0].previewCopy }}
+
+    section#media-index
+
+      each(loop='post in dato.media_new[0].index')
+
+        if(condition='post.itemType === "15917"')
+
+          figure.pr
+            img(src='//{{ dato._meta.imgixHost + post.heroImage.path}}?fit=crop&amp;w=400&amp;h=300')
+
+            figcaption
+              p press release
+              h3 {{ post.previewHeader }}
+
+        elseif(condition='post.itemType === "15022"')
+
+          figure.gallery
+            img(src='//{{ dato._meta.imgixHost + post.featImage.path}}?fit=crop&amp;w=400&amp;h=300')
+
+            figcaption
+              p gallery
+              h3 {{ post.heading }}

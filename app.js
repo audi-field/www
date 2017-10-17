@@ -43,6 +43,16 @@ module.exports = {
         {
           name: 'stadium',
           json: 'stadium.json'
+        },
+        {
+          name: 'media_new',
+        },
+        {
+          name: 'press_release',
+          template: {
+            path: 'views/_pr-template.sgr',
+            output: (pr) => { return `press-release/${pr.slug}.html`}
+          }
         }
       ],
       json: 'data.json'

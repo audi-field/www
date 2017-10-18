@@ -1,3 +1,11 @@
+console.log('fevo file')
+
+Fevo.init({
+          publisherKey: '730a4d05-1716-4788-80bc-c16d430077ab',
+          env: 'prod'
+      })
+Fevo.purchase('.fevo-button')
+
 console.log('you can use ES6 here : )')
 
 // get screen size
@@ -60,8 +68,6 @@ function headerColorChange () {
   const divBottom = header.offsetTop + header.clientHeight
   const isScrolledPast = window.scrollY > divBottom
 
-  console.log(window.scrollY)
-
   if (isScrolledPast) {
     header.classList.add('bg')
   } else {
@@ -70,3 +76,5 @@ function headerColorChange () {
 }
 
 window.addEventListener('scroll', debounce(headerColorChange))
+
+

@@ -1,0 +1,7 @@
+svg(viewBox='0 10 350 50')
+  defs
+    filter#shadow
+      feDropShadow(dx='0' dy='0' stdDeviation='5')
+    style .cls-1{fill: white} 
+
+  use(xlink:href='#icon-tab')

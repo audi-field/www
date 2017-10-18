@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='description' content='')
+    meta(name='author' content='asasmith')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+
+    block(name='title')
+      title Title of Your Site
+
+    link(rel='stylesheet' href='/css/index.css')
+
+  body(id='pr')
+    include(src='/includes/_header.sgr')
+
+    #hero(style='background: url(https://{{ dato._meta.imgixHost + dato.media_new[0].bgImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+
+    section#feat.tab.left-tab.full-band(style='background: url(https://{{ dato._meta.imgixHost + item.heroImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+
+      header
+        include(src='/includes/_tab.sgr')
+
+        h2 news &amp media
+
+    .content(md) {{ item.copy }}
+
+    include(src='/includes/_icon-sprite.sgr')
+
+    block(name='javascript')
+      script(src='/js/main.js' defer)

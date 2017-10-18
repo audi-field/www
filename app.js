@@ -50,7 +50,7 @@ module.exports = {
         {
           name: 'press_release',
           template: {
-            path: 'views/_pr-template.sgr',
+            path: 'views/pr-template.sgr',
             output: (pr) => { return `press-release/${pr.slug}.html`}
           }
         }

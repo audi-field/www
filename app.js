@@ -56,6 +56,9 @@ module.exports = {
         },
         {
           name: 'join'
+        },
+        {
+          name: 'faq'
         }
       ],
       json: 'data.json'

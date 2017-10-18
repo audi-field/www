@@ -24,7 +24,12 @@ html
 
         h2 news &amp media
 
-    .content(md) {{ item.copy }}
+
+    .content
+
+      h3 {{ item.title }}
+      
+      .copy(md) {{ item.copy }}
 
     include(src='/includes/_icon-sprite.sgr')
 

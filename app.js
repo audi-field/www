@@ -53,6 +53,9 @@ module.exports = {
             path: 'views/pr-template.sgr',
             output: (pr) => { return `press-release/${pr.slug}.html`}
           }
+        },
+        {
+          name: 'join'
         }
       ],
       json: 'data.json'

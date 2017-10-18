@@ -15,4 +15,4 @@ header(id='top-nav')
       li: a(href='/news-and-media') news and media
       li: a(href='/join-us') join us
       li: a(href='/about') about
-      li(class='button-reg') buy tickets
+      li(class='button-reg fevo-button' data-event-key='DC-United--Audi-Field-Season-Deposits-1mJSrCJ8') buy tickets

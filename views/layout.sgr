@@ -19,5 +19,7 @@ html
 
     include(src='/includes/_icon-sprite.sgr')
 
+    script(type='text/javascript' src='https://sdk.fevo.com/v1/fevo.js')
+
     block(name='javascript')
       script(src='js/main.js' defer)

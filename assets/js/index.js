@@ -27,18 +27,18 @@ checkScreenWidth()
 
 // show nav menu when hamburger is clicked
 
-const hamburger = document.querySelector('#toggle input')
-const nav = document.querySelector('nav ul')
+const hamburger = document.querySelector('#menu-toggle input')
+const header = document.getElementById('top-nav')
 const body = document.querySelector('body')
 
 hamburger.addEventListener('change', function () {
   console.log('clicked')
   if (hamburger.checked === true) {
-    nav.classList.add('open')
-    nav.classList.remove('closed')
+    header.classList.add('open')
+    header.classList.remove('closed')
   } else {
-    nav.classList.add('closed')
-    nav.classList.remove('open')
+    header.classList.add('closed')
+    header.classList.remove('open')
   }
 }, false)
 

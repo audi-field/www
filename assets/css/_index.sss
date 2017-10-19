@@ -1,24 +1,26 @@
 #index
+  width: 100%
   
   & #top-nav
-    background-color: inherit
+    background: inherit
+    transition: background .5s ease-in
 
     &.bg
+      background: linear-gradient(0deg, transparent 60%, var(--bgWhite) 62%, white 64%) !important   
 
       @media (--laptop-rg)
-        background-color: #fff
-      
+        background: linear-gradient(0deg, transparent, var(--bgWhite), white 4%) !important   
+
       & #logo
 
         & img
+          width: 4em
 
           @media (--tablet-lnd)
             width: 6em
 
           @media (--laptop-rg)
             width: 4em
-
-
 
   & #bgvid-wrap
     width: 100%
@@ -123,7 +125,6 @@
           content: ''
           position: absolute
           display: block
-          width: 120%
           border: 0px solid transparent
           border-width: 50px 25px 0 25px
           border-top-color: white
@@ -143,7 +144,6 @@
           content: ''
           position: absolute
           display: block
-          width: 120%
           border: 0px solid transparent
           border-width: 50px 25px 0 25px
           border-top-color: white
@@ -166,7 +166,6 @@
           content: ''
           position: absolute
           display: block
-          width: 120%
           border: 0px solid transparent
           border-width: 50px 25px 0 25px
           border-top-color: white
@@ -349,7 +348,6 @@
       height: 50%
       align-items: center
       justify-content: space-around
-      flex-wrap: wrap
       text-align: center
 
       @media (--laptop-rg)

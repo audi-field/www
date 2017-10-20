@@ -24,14 +24,21 @@
 
   & #bgvid-wrap
     width: 100%
-    height: 100vh
+    height: 102vh
     position: relative  
     top: 0
     right: 0
     bottom: 0
     left: 0
     z-index: -2
-    margin-bottom: 8em
+    margin-bottom: 5em
+
+    @media (--mob-sm-lnd)
+      height: 150vh
+
+    @media (--tablet)
+      height: 90vh
+      margin-bottom: 0
 
     & video
       height: 100%
@@ -41,32 +48,46 @@
     & #tinted
       height: 102vh
       width: 100%
-      background-color: rgba(255, 255, 255, .8)
+      background: linear-gradient(0deg,  var(--white) 10%, var(--bgVidWhite))
       position: absolute
       top: 0
       right: 0
       bottom: 0
       left: 0
+
+      @media (--mob-sm-lnd)
+        height: 150vh
       
+      @media (--tablet)
+        height: 90vh
+
+      @media (--laptop-rg)
+        height: 102vh
+
       & #countdown-wrap
         display: flex
         flex-direction: column
         justify-content: flex-end
         align-items: center
         height: 100%
+        padding-bottom: 2em
+  
+        @media (--laptop-rg)
+          padding-bottom: 4em
 
         & header
     
           & h2
             font-weight: 100
             font-size: 2em
-            border-bottom: 1px solid var(--red)
+            border-bottom: 2px solid var(--red)
+            padding-bottom: .25em
 
         & #counter
           display: flex
           flex-direction: column
 
-          @media (--laptop-rg)
+          @media (--tablet)
             flex-direction: row
 
 
@@ -81,17 +102,6 @@
   & section
     margin-bottom: 5em
   
-    & header
-      color: var(--black)
-      background-color: white
-      position: absolute
-      max-height: 4em
-      text-align: center
-      z-index: 1
-
-      & h2
-        border-bottom: 1px solid var(--red)
-        margin-bottom: .45em
 
     & .flex-wrapper
       display: flex
@@ -100,142 +110,42 @@
       width: 90%
       margin: auto 
 
-      @media (--laptop-rg)
-        flex-direction: row
-
-    &.center-tab
-
-      & header
-        left: 50% 
-        right: 50% 
-        transform: translateX(-50%)
-        width: 18em
-        padding: 0 1em
-        text-align: center
-        top: -1px
-
-        @media (--laptop-rg)
-          width: 16em
-
-        &:before
-          top: -8px
-          right: 50%
-          transform: translate(-50%)
-          left: 50%
-          content: ''
-          position: absolute
-          display: block
-          border: 0px solid transparent
-          border-width: 50px 25px 0 25px
-          border-top-color: white
-          z-index: -1
-
-    &.left-tab
-      
-      & header
-        left: 0
-        top: -1px
-
-        &:after
-          top: -8px
-          right: 50%
-          transform: translate(-50%)
-          left: 50%
-          content: ''
-          position: absolute
-          display: block
-          border: 0px solid transparent
-          border-width: 50px 25px 0 25px
-          border-top-color: white
-          z-index: -1
-        
-    &.right-tab
-      
-      & header
-        right: 0
-        top: -1px
-        width: 19em
-        padding: 0 1em  
-        text-align: center
-
-        &:before
-          top: -8px
-          right: 50%
-          transform: translate(-50%)
-          left: 50%
-          content: ''
-          position: absolute
-          display: block
-          border: 0px solid transparent
-          border-width: 50px 25px 0 25px
-          border-top-color: white
-          z-index: -1
-   
-  & .full-band
-    height: 75vh
-    position: relative
-
-    & .flex-wrapper
-
-      & figure
-        color: white
-        background-color: var(--bgRed)
-        max-width: 24em 
-        padding: 2em
-
 
   & #fan-exp
+    height: 95vh
 
     @media (--mob-sm-lnd)
-      height: 120vh
+      height: 165vh
 
-    @media (--laptop-rg)
+    @media (--tablet)
       height: 75vh
 
-    & header
-      width: 18em
-
-      @media (--mob-rg)
-        width: 20em
+    @media (--laptop-rg)
+      height: auto
+      margin-top: 2em
 
     & .flex-wrapper
-      justify-content: flex-end
-
-      @media (--mob-rg)
-        justify-content: space-around
-        padding-top: 4em
-
-      @media (--mob-sm-lnd)
-        height: 100%
 
       @media (--laptop-rg)
-        justify-content: space-between
-        padding: 0
-
-      & figure
-        color: white
-        background-color: var(--bgRed)
-        max-width: 24em 
-        padding: 2em
-
-        &:nth-of-type(1)
-          align-self: flex-end
-
-        &:nth-of-type(2)
-          align-self: flex-start
+        width: 95%
 
   & #hospitality
 
     & header
-      width: 23em
-      text-align: center
-      padding: 0 1em
 
-      @media (--mob-rg)
-        width: 25em
+      & h2
+        text-align: center
+        left: 20%
 
-      @media (--laptop-rg)
-        justify-content: flex-end
+        @media (--mob-sm-lnd)
+          left: 9%
+
+        @media (--tablet)
+          left: 13%
+
+        @media (--laptop-rg)
+          max-width: 12em
+          left: 7.5%
 
     & .flex-wrapper
       justify-content: center
@@ -243,20 +153,32 @@
       & figure
         align-self: flex-end
 
+    
   & #galleries
     position: relative
+    height: auto
 
     & header
+      z-index: 1
 
-      @media (--mob-rg)
-        width: 20em
+      & h2
+        left: 22%
 
-      @media (--mob-sm-lnd)
-        width: 21em
+        @media (--mob-sm-lnd) 
+          left: 35%
+
+        @media (--tablet)
+          left: 38%
+
+        @media (--laptop-rg)
+          left: 61%
 
     & .flex-wrapper
       width: 100%
       height: auto
+
+      @media (--laptop-rg)
+        flex-direction: row
 
       & figure
         flex: 1 1 auto
@@ -298,31 +220,17 @@
 
           & h3
             border-bottom: 1px solid white
-            
+           
   & #construction-cam
     margin-bottom: 0
 
-    & header
-      width: 20em
-      padding: 0 1em
-
-      @media (--mob-rg)
-        width: 24em
-
-      &:after
-        left: 20em
-
-        @media (--mob-rg)
-          left: 22em
-
-      
     & .flex-wrapper
       justify-content: flex-end
       align-items: center
 
       @media (--laptop-rg)
-        justify-content: center
-        align-items: flex-end
+        justify-content: flex-end
+        align-items: center
 
       & .button-reg
         margin-bottom: 3em
@@ -331,7 +239,7 @@
   & #fast-facts
     color: white
     background-color: var(--red)
-    height: 65vh
+    height: auto
     display: flex
     flex-direction: column
     justify-content: center
@@ -341,7 +249,11 @@
       max-width: 10em
       margin: auto
       text-align: center
-      padding-top: 3em
+      padding: 1em
+
+      @media (max-width: 500px)
+        border-bottom: 2px solid var(--white)
+        padding-bottom: .5em
 
     & .flex-wrapper
       flex: 1 1 auto
@@ -349,6 +261,9 @@
       align-items: center
       justify-content: space-around
       text-align: center
+  
+      @media (--tablet)
+        flex-direction: row
 
       @media (--laptop-rg)
         flex-wrap: no-wrap

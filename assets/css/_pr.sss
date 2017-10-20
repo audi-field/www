@@ -18,10 +18,18 @@
       left: .5em
 
       & h2
+        left: 18%
+
+        @media (--mob-sm-lnd)
+          left: 20%
       
         @media (--tablet)
-          position: relative
-          left: 1em
+          left: 22%
+          bottom: .3em
+
+        @media (--laptop-rg)
+          left: 14%
+          bottom: -1.3em
 
   & .content
     width: 90%

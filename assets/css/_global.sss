@@ -107,9 +107,10 @@ section
       display: flex
       flex-direction: column
       position: absolute
+      top: -1px
 
       & svg
-        width: 120%
+        width: 100%
         position: absolute
         top: 0
 
@@ -125,8 +126,35 @@ section
           top: 0 
 
       & h2 
-        border-bottom: 1px solid var(--red)
+        padding-bottom: .2em
+        position: absolute
         z-index: 1
+        bottom: -1em
+        max-width: 6em
+        text-align: center
+
+        &:after
+          content: ''
+          width: 80%
+          border-bottom: 2px solid var(--red)
+          position: absolute
+          left: 50%
+          right: 50%
+          transform: translateX(-50%)
+          top: 1.65em
+
+          @media (--mob-sm-lnd)
+            top: 1em
+            width: 90%
+
+          @media (--laptop-rg)
+            width: 100%
+            top: 1em
+
+        @media (--mob-sm-lnd)
+          bottom: -1.25em
+          max-width: 12em
+
 
     &.center-tab
 
@@ -138,45 +166,11 @@ section
       & header
         align-items: flex-start  
 
-        & h2
-          transform: translateX(33%)
-
-          @media (--mob-sm-lnd)
-            transform: translateX(48%)
-
-          @media (--tablet-lnd)
-            transform: translateX(58%)
-
-          @media (--laptop-rg)
-            transform: translateX(55%)
-
     &.right-tab
 
       & header
         align-items: flex-end  
-        width: 90%
         top: -1px
-
-        @media (--mob-sm-lnd)
-          width: 80%
-          top: 0
-
-        & h2
-          transform: translateX(-16%)
-
-          @media (--mob-sm-lnd)
-            transform: translateX(-26%)
-
-          @media (--tablet)
-            transform: translateX(-28%)
-
-          @media (--tablet-lnd)
-            transform: translateX(-26%)
-
-          @media (--laptop-rg)
-            transform: translateX(-26%)
-
-    
 
   &.mod-block
     height: auto
@@ -206,7 +200,7 @@ section
 
       @media (--mob-rg)
         justify-content: space-around
-        padding-top: 4em
+        padding-top: 2em
 
       @media (--mob-sm-lnd)
         height: 100%

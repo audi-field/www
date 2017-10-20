@@ -3,14 +3,23 @@
   & #feat
     width: 100%
 
+    @media (--mob-sm-lnd)
+      height: 95vh
+
+    @media (--tablet)
+      height: 55vh
+
     & header
 
       & h2
-        transform: translateX(45%)
+        left: 18%
 
         @media (--mob-sm-lnd)
-          transform: translateX(65%)
-    
+          left: 20% 
+
+        @media (--laptop-rg)
+          left: 14%
+
     & .flex-wrapper
       justify-content: flex-end
 

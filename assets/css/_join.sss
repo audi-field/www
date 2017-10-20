@@ -1,12 +1,37 @@
 #join-us
 
+  & #join
+
+    & header
+    
+      & h2
+        
+        &:after
+          top: 1em
+
   & #video
     height: 75vh
+
+    @media (--mob-sm-lnd)
+      height: 155vh
+
+    @media (--tablet)
+      height: 60vh
+
+    @media (--laptop-rg)
+      height: 80vh
 
     & iframe
       margin-top: 8em
 
   & #seating
+
+    & header
+    
+      & h2
+        
+        &:after
+          top: 1em
 
     & .flex-wrapper
       margin: 5em auto 0
@@ -28,6 +53,13 @@
           position: relative
           bottom: .75em
           text-align: center
+        
+        &:after
+          top: 2.4em
+
+          @media (--mob-sm-lnd)
+            top: 1.6em
+            width: 60%
 
   & #prev-center-gallery
     display: flex
@@ -44,7 +76,6 @@
 
     @media (--laptop-rg)
       height: 75vh
-
 
     & figure
       width: 90%

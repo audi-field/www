@@ -7,6 +7,13 @@
       @media (--laptop-rg)
         background-color: #fff
 
+  & section
+
+    & h2
+
+      &:after
+        top: 1em
+
   & #site
 
     & .flex-wrapper
@@ -39,8 +46,15 @@
     width: 95%
     margin: auto
 
+    @media (--mob-sm-lnd)
+      height: 125vh
+
     @media (--tablet)
       width: auto
+      height: 55vh
+
+    @media (--laptop-rg)
+      height: 80vh
 
   & #seating
 

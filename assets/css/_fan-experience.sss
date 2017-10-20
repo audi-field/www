@@ -13,19 +13,25 @@
     margin-bottom: 8em
 
   & #fan-exp
-    height: 75vh
+    height: 85vh
 
     @media (--mob-sm-lnd)
-      height: 125vh
+      height: 145vh
 
     @media (--tablet)
-      height: 55vh
+      height: 65vh
 
     @media (--tablet-lnd)
       height: 75vh
 
     @media (--laptop-rg)
       height: 75vh
+
+    & h2
+      left: 18%
+
+      @media (--laptop-rg)
+        left: 12%
 
   & #clubs-suites
     height: auto
@@ -36,11 +42,11 @@
         display: flex
         flex-direction: column
         width: 90%
-        height: 65vh
+        height: 75vh
         margin: 5em auto 0
 
         @media (--mob-sm-lnd)
-          height: 85vh
+          height: 115vh
 
         @media (--tablet)
           height: 55vh
@@ -96,4 +102,25 @@
             align-self: flex-start
             margin: auto auto 1em 2em
 
-    
+  & #match-exp
+
+    @media (--mob-sm-lnd)
+      height: 95vh
+
+    @media (--tablet)
+      height: 45vh
+  
+    & header
+
+      & h2
+        left: 18% 
+
+        @media (--mob-sm-lnd)
+          left: 28%
+          bottom: -1.1em
+
+        @media (--tablet)
+          left: 32%
+
+        @media (--laptop-rg)
+          left: 57%

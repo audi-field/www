@@ -59,6 +59,9 @@ module.exports = {
         },
         {
           name: 'faq'
+        },
+        {
+          name: 'footer' 
         }
       ],
       json: 'data.json'

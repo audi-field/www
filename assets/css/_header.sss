@@ -29,13 +29,14 @@ header#top-nav
     & input
       display: block
       position: absolute
-      top: 6%
-      right: 2.5%
-      width: 40px
-      height: 40px
+      top: 12%
+      right: 5%
+      width: 20px
+      height: 20px
       cursor: pointer
       opacity: 0
       z-index: 6 
+      margin: 0
 
       &:checked ~
 
@@ -48,6 +49,18 @@ header#top-nav
 
           & #tix
             transform: translateY(0)
+
+        & #hamburger
+
+          & span:first-of-type
+            transform: rotate(45deg) translate(3px, 8px)
+
+          & span:nth-of-type(2)
+            opacity: 0
+            transform: scale(.02, .02)
+
+          & span:last-of-type
+            transform: rotate(-45deg) translate(2px, -7px) 
 
     & #hamburger 
       position: absolute
@@ -66,6 +79,7 @@ header#top-nav
         border-radius: .2em
         background: var(--red)
         z-index: 5
+        transition: all .25s ease-in
 
     & #nav-menu
       display: flex

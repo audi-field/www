@@ -1,0 +1,118 @@
+footer
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  min-height: 100vh
+  position: relative
+  padding: 1em
+
+  @media (--tablet)
+    min-height: 60vh
+
+  @media (--laptop-rg)
+    flex-direction: row
+
+  & #tint
+    background-color: var(--bgBlackDark)
+    width: 100%
+    height: 100%
+    position: absolute 
+
+  & #buy-tix,
+  & #social,
+  & #email
+    display: flex
+    flex: 1 1 auto
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    height: 8em
+    margin: 1em
+    z-index: 1
+    color: var(--white)
+
+    @media (--tablet)
+      max-width: 80%
+
+    @media (--laptop-rg)
+      max-width: 25%
+
+  & #buy-tix,
+  & #email
+    flex-direction: column
+    justify-content: space-around
+    text-transform: capitalize
+    text-align: center
+
+  & #buy-tix
+    color: var(--white)
+    z-index: 1
+    order: 3
+
+    @media (--laptop-rg)
+      order: 1
+      justify-content: space-between
+      align-items: flex-start
+
+    & .button-reg
+      margin-bottom: 0
+
+  & #social
+    color: var(--red)
+    z-index: 1
+    flex-wrap: wrap
+    align-items: center
+    order: 2 
+
+    & [href*="facebook"]:hover
+      color: #3b5998
+
+    & [href*="youtube"]:hover
+      color: #fff
+
+    & [href*="twitter"]:hover
+      color: #55acee
+
+    & [href*="instagram"]:hover
+      color: #e95950
+
+    & svg.icon
+      width: 2em
+      fill: currentColor
+      transition: color .25s ease-in
+
+    & li
+      flex: 1 1 25%
+      text-align: center
+
+      &:last-of-type
+        flex: 1 1 100%
+  & #email
+
+    @media (--laptop-rg)
+      order: 3
+      justify-content: space-between
+      align-items: flex-end
+      text-align: right
+
+    & form
+      display: flex
+      flex-direction: column
+      max-width: 10em
+      justify-content: space-around
+
+      & input
+        color: var(--white)
+        font-family: inherit
+        font-size: 1.25em
+        border: none
+        border-bottom: 2px solid #E4002B
+        background: transparent
+        text-align: center
+
+        @media (--laptop-rg)
+          text-align: right
+
+    & button
+      font-size: 1em

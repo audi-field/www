@@ -1,0 +1,36 @@
+footer(style='background: url(https://{{ dato._meta.imgixHost + dato.footer[0].bgImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+
+  #tint
+
+  #buy-tix
+    p {{ dato.footer[0].buyTixCopy }}
+    p.button-reg.fevo-button buy tickets
+
+  ul#social
+    li: a(href='https://www.instagram.com/dcunited/')
+      | 
+        svg(viewBox='0 0 56 56' class='icon icon-ig')
+          use(xlink:href='#icon-ig')
+
+    li: a(href='https://www.facebook.com/dcunited/')
+      | 
+        svg(viewBox='0 0 56 56' class='icon icon-facebook')
+          use(xlink:href='#icon-facebook')
+
+    li: a(href='https://twitter.com/dcunited')
+      | 
+        svg(viewBox='0 0 56 56' class='icon icon-twitter')
+          use(xlink:href='#icon-twitter')
+
+    li: a(href='https://www.youtube.com/user/dcunited')
+      | 
+        svg(viewBox='0 0 56 56' class='icon icon-youtube')
+          use(xlink:href='#icon-youtube')
+
+    li #AudiField
+
+  #email
+    p {{ dato.footer[0].emailSignupCopy }}
+    form
+      input(placeholder='email' type='email' name='email')
+    button.button-reg submit

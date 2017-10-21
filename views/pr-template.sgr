@@ -31,6 +31,8 @@ html
       
       .copy(md) {{ item.copy }}
 
+    include(src='/includes/_footer.sgr')
+
     include(src='/includes/_icon-sprite.sgr')
 
     script(type='text/javascript' src='https://sdk.fevo.com/v1/fevo.js')

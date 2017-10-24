@@ -58,7 +58,7 @@ module.exports = {
           name: 'join'
         },
         {
-          name: 'faq'
+          name: 'about'
         },
         {
           name: 'footer' 
@@ -77,7 +77,7 @@ module.exports = {
         },
         {
           name: 'transportation_qa'
-        },
+        }
       ],
       json: 'data.json'
     })

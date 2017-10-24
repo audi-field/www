@@ -78,22 +78,29 @@
     
           & h2
             font-weight: 100
-            font-size: 2em
+            font-size: 1.5em
             border-bottom: 2px solid var(--red)
             padding-bottom: .25em
 
+            @media (--laptop-rg)
+              font-size: 2em
+
         & #counter
           display: flex
-          flex-direction: column
-
-          @media (--tablet)
-            flex-direction: row
-
 
           & p
-            font-size: 6em
+            font-size: 3.5em
             line-height: 1em
             margin-bottom: 0
+
+            @media (--mob-rg)
+              font-size: 4.5em
+  
+            @media (--mob-lg)
+              font-size: 5em
+
+            @media (--tablet)
+              font-size: 6em
   
             @media (--laptop-rg)
               margin-bottom: .5em

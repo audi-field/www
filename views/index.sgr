@@ -1,4 +1,15 @@
 extends(src='layout.sgr')
+
+  block(name='title')
+    if(condition=' dato.index[0].seoTitle !== null')
+      title {{ dato.index[0].seoTitle }}
+    else
+      title {{ dato._meta.globalSeo.fallbackSeo.title }}
+    if(condition=' dato.index[0].seoDescription !== null')
+      meta(name='description' content='{{ dato.index[0].seoDescription }}')
+    else
+      meta(name='description' content='{{ dato._meta.globalSeo.fallbackSeo.description }}')
+
   block(name='content')
 
     #bgvid-wrap

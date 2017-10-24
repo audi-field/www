@@ -1,4 +1,15 @@
 extends(src='layout.sgr')
+
+  block(name='title')
+    if(condition=' dato.join[0].seoTitle !== null')
+      title {{ dato.join[0].seoTitle }}
+    else
+      title {{ dato._meta.globalSeo.fallbackSeo.title }}
+    if(condition=' dato.join[0].seoDescription !== null')
+      meta(name='description' content='{{ dato.join[0].seoDescription }}')
+    else
+      meta(name='description' content='{{ dato._meta.globalSeo.fallbackSeo.description }}')
+
   block(name='content')
 
     #hero(style='background: url(https://{{ dato._meta.imgixHost + dato.join[0].heroImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')

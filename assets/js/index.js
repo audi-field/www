@@ -70,10 +70,7 @@ const countdown = () => {
     secDisp.innerHTML = `${seconds}`
   }
 // run timer display function every second
-  const timer = window.setInterval(countdownDisplay, 1000)
-
-// call timer function
-  timer()
+ window.setInterval(countdownDisplay, 1000)
 }
 
 countdown()

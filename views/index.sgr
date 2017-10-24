@@ -10,10 +10,10 @@ extends(src='layout.sgr')
           header
             h2 countdown to kick off
           #counter
-            p#days 00: 
-            p#hours 00: 
-            p#minutes 00: 
-            p#seconds 00 
+            p#days 
+            p#hours
+            p#minutes
+            p#seconds
 
     section(id="fan-exp" class='full-band tab center-tab' style='background: url(https://{{ dato._meta.imgixHost + dato.fan_exp[0].bgImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 

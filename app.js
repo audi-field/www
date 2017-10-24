@@ -62,7 +62,22 @@ module.exports = {
         },
         {
           name: 'footer' 
-        }
+        },
+        {
+          name: 'premium_seating_qa'
+        },
+        {
+          name: 'preview_center_qa'
+        },
+        {
+          name: 'suites_qa'
+        },
+        {
+          name: 'supporter_qa'
+        },
+        {
+          name: 'transportation_qa'
+        },
       ],
       json: 'data.json'
     })

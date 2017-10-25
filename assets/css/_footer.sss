@@ -59,7 +59,7 @@ footer
       margin-bottom: 0
 
   & #social
-    color: var(--red)
+    color: var(--white)
     z-index: 1
     flex-wrap: wrap
     align-items: center
@@ -89,6 +89,9 @@ footer
       &:last-of-type
         flex: 1 1 100%
   & #email
+    display: flex
+    flex-direction: column
+    justify-content: space-between
 
     @media (--laptop-rg)
       order: 3
@@ -100,7 +103,9 @@ footer
       display: flex
       flex-direction: column
       max-width: 10em
-      justify-content: space-around
+      max-height: 5em
+      justify-content: space-between
+      margin: 0
 
       & input
         color: var(--white)

@@ -31,7 +31,8 @@ footer(style='background: url(https://{{ dato._meta.imgixHost + dato.footer[0].b
 
   #email
     p {{ dato.footer[0].emailSignupCopy }}
-    form(name='email' netlify-honeypot='bot_field' netlify)
+
+    form#email(name='email' netlify-honeypot='bot_field' netlify)
       input(placeholder='email' type='email' name='email')
       input(name='bot_field')
-    button.button-reg submit
+      button.button-reg submit

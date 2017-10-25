@@ -77,6 +77,9 @@ module.exports = {
         },
         {
           name: 'transportation_qa'
+        },
+        {
+          name: 'photo_gallery'
         }
       ],
       json: 'data.json'

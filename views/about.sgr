@@ -27,7 +27,7 @@ extends(src='layout.sgr')
         
         h2 contact us
 
-      form(name='join_us' netlify)
+      form(name='join_us' netlify-honeypot='bot_field' netlify)
 
         input(placeholder='first name' type='text' name='first_name')
 
@@ -36,6 +36,8 @@ extends(src='layout.sgr')
         input(placeholder='email' type='email' name='email')
 
         input(placeholder='phone' type='tel' name='tel')
+
+        input(name='bot_field')
 
         button.button-reg submit
 

@@ -1,0 +1,147 @@
+extends(src='layout.sgr')
+
+  block(name='title')
+    if(condition=' dato.about[0].seoTitle !== null')
+      title {{ dato.about[0].seoTitle }}
+    else
+      title {{ dato._meta.globalSeo.fallbackSeo.title }}
+    if(condition=' dato.about[0].seoDescription !== null')
+      meta(name='description' content='{{ dato.about[0].seoDescription }}')
+    else
+      meta(name='description' content='{{ dato._meta.globalSeo.fallbackSeo.description }}')
+
+  block(name='content')
+
+    #hero(style='background: url(https://{{ dato._meta.imgixHost + dato.about[0].bgImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+
+    section#feat.tab.center-tab.full-band(style='background: url(https://{{ dato._meta.imgixHost + dato.about[0].heroImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+
+      header
+        include(src='/includes/_tab.sgr')
+
+        h2 {{ dato.about[0].title }} 
+
+    #contact
+
+      header
+        
+        h2 contact us
+
+      form(name='join_us' netlify)
+
+        input(placeholder='first name' type='text' name='first_name')
+
+        input(placeholder='last name' type='text' name='last_name')
+
+        input(placeholder='email' type='email' name='email')
+
+        input(placeholder='phone' type='tel' name='tel')
+
+        button.button-reg submit
+
+    #faq-wrap
+
+      section#prem-seat
+
+        header
+
+          h2 {{ dato.premium_seating_qa[0].title}}
+
+        each(loop='faq in dato.premium_seating_qa[0].faq')
+
+          article
+            input(type='checkbox')
+            
+            span  
+            span
+
+            .faq-wrapper
+
+              h3 {{ faq.question }}
+
+              div.answer
+                p {{ faq.answer }} 
+
+      section#prev-center
+
+        header
+          h2 {{ dato.preview_center_qa[0].title}}
+
+        each(loop='faq in dato.preview_center_qa[0].faq')
+
+          article
+
+            input(type='checkbox')
+            
+            span  
+            span
+
+            .faq-wrapper
+
+              h3 {{ faq.question }}
+
+              div.answer
+                p {{ faq.answer }} 
+
+      section#suites
+
+        header
+          h2 {{ dato.suites_qa[0].title}}
+
+        each(loop='faq in dato.suites_qa[0].faq')
+
+          article
+
+            input(type='checkbox')
+            
+            span  
+            span
+
+            .faq-wrapper
+
+              h3 {{ faq.question }}
+
+              div.answer
+                p {{ faq.answer }} 
+
+      section#supporter
+
+        header
+          h2 {{ dato.supporter_qa[0].title}}
+
+        each(loop='faq in dato.supporter_qa[0].faq')
+
+          article
+
+            input(type='checkbox')
+            
+            span  
+            span
+
+            .faq-wrapper
+
+              h3 {{ faq.question }}
+
+              div.answer
+                p {{ faq.answer }} 
+
+      section#transportation
+
+        header
+          h2 {{ dato.transportation_qa[0].title}}
+
+        each(loop='faq in dato.transportation_qa[0].faq')
+
+          article
+
+            input(type='checkbox')
+            
+            span  
+            span
+
+            .faq-wrapper
+
+              h3 {{ faq.question }}
+
+              div.answer
+                p {{ faq.answer }} 

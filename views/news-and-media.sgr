@@ -51,7 +51,7 @@ extends(src='layout.sgr')
 
         elseif(condition='post.itemType === "15022"')
 
-          a(href='/gallery/{{ post.slug }}')
+          a(href='/galleries/{{ post.slug }}')
             figure.gallery
               img(src='//{{ dato._meta.imgixHost + post.featImage.path}}?fit=crop&amp;w=400&amp;h=300')
 

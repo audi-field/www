@@ -61,6 +61,8 @@ extends(src='layout.sgr')
 
         .block
           img(src='//{{ dato._meta.imgixHost + dato.stadium[0].stadiumInfographic[0].infographic.path }}?fit=clamp&;w=1920&amp;h=1280')
-
+      
+        figure.cta
+          a.button-reg(href='http://audifield.io-media.com/web/index.html' target='_blank') virtual seatmap
 
 

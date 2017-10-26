@@ -49,7 +49,7 @@ extends(src='layout.sgr')
 
           use(xlink:href='#icon-tab')
 
-        h2 {{ dato.fan_exp[0].clubSuites[0].header }}
+        h2 clubs &amp suites
 
       .flex-wrapper
 
@@ -63,7 +63,7 @@ extends(src='layout.sgr')
 
             a.button-white(href='/galleries/{{ gallery.slug }}') view gallery
 
-    section#match-exp.full-band.tab.right-tab(style='background: url(https://{{ dato._meta.imgixHost + dato.fan_exp[0].matchdayExp[0].bgImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+    section#match-exp.full-band.tab.right-tab(style='background: url(https://{{ dato._meta.imgixHost + dato.fan_exp[0].matchdayExperienceGallery.featImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 
       header
         svg(viewBox='0 10 350 50')
@@ -74,8 +74,9 @@ extends(src='layout.sgr')
 
           use(xlink:href='#icon-tab')
 
-        h2 {{ dato.fan_exp[0].matchdayExp[0].header }}
+        h2 {{ dato.fan_exp[0].matchdayExperienceGallery.heading }}
 
       .flex-wrapper.single-block
         figure
-          p {{ dato.fan_exp[0].matchdayExp[0].copy }} 
+          p {{ dato.fan_exp[0].matchdayExperienceGallery.copy }} 
+          a.button-clear(href='/galleries/{{ dato.fan_exp[0].matchdayExperienceGallery.slug}}') view gallery

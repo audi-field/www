@@ -53,22 +53,15 @@ extends(src='layout.sgr')
 
       .flex-wrapper
 
-        .block(style='background: url(https://{{ dato._meta.imgixHost + dato.fan_exp[0].clubSuites[0].suiteBgImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+        each(loop='gallery in dato.fan_exp[0].suitesClubAreaGallery')
 
-          figure
-            h3 {{ dato.fan_exp[0].clubSuites[0].headerSuiteTypes }}
-            p(md) {{ dato.fan_exp[0].clubSuites[0].copySuiteTypes }}
+          .block(style='background: url(https://{{ dato._meta.imgixHost + gallery.featImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 
-          p.button-white view gallery
+            figure
+              h3 {{ gallery.heading }}
+              p(md) {{ gallery.copy }} 
 
-        .block(style='background: url(https://{{ dato._meta.imgixHost + dato.fan_exp[0].clubSuites[0].clubBgImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
-
-          figure
-            h3 {{ dato.fan_exp[0].clubSuites[0].headerClubAreas }}
-            p(md) {{ dato.fan_exp[0].clubSuites[0].copyClubAreas }}
-
-          p.button-white view gallery
-
+            a.button-white(href='/galleries/{{ gallery.slug }}') view gallery
 
     section#match-exp.full-band.tab.right-tab(style='background: url(https://{{ dato._meta.imgixHost + dato.fan_exp[0].matchdayExp[0].bgImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 

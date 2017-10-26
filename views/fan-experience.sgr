@@ -63,6 +63,9 @@ extends(src='layout.sgr')
 
             a.button-white(href='/galleries/{{ gallery.slug }}') view gallery
 
+        figure.cta
+          a.button-reg(href='http://audifield.io-media.com/web/index.html' target='_blank') virtual seatmap
+
     section#match-exp.full-band.tab.right-tab(style='background: url(https://{{ dato._meta.imgixHost + dato.fan_exp[0].matchdayExperienceGallery.featImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 
       header

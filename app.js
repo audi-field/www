@@ -79,7 +79,11 @@ module.exports = {
           name: 'transportation_qa'
         },
         {
-          name: 'photo_gallery'
+          name: 'photo_gallery',
+          template: {
+            path: 'views/gallery-template.sgr',
+            output: (gallery) => { return `galleries/${gallery.slug}.html`}
+          }
         }
       ],
       json: 'data.json'

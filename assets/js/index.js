@@ -33,7 +33,9 @@ const countdown = () => {
   
 
 // set kickoff date  
-  const kickoff = new Date(2018, 9, 1)
+  const kickoff = new Date(2018, 5, 30, 19)
+
+    console.log(kickoff)
 
 // create variables
   let seconds  
@@ -137,6 +139,12 @@ window.addEventListener('scroll', debounce(headerColorChange))
 // construction cam
 
 const constructionCam = () => {
+// page check
+  const body = document.querySelector('body')
+
+  if (body.getAttribute('id') === 'construction-cam') {
+    console.log('this is the con cam page') 
+
 // set timestamp to current time on page load 
   const img = document.getElementById('cameraImage')
   const ts = new Date().getTime();
@@ -148,5 +156,6 @@ const constructionCam = () => {
     const ts = new Date().getTime();
     img.src = `https://oxblue.com/archive/a9e49108373fed879685338c5bbf0cc6/800x600.jpg?ts=${ts}`
   },90000);
+  }
 }
 constructionCam() 

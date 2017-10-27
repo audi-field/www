@@ -85,7 +85,7 @@ extends(src='layout.sgr')
 
     section(id='fast-facts' class='full-band')
       
-      h2.header fun facts
+      h2.header {{ dato.index[0].fastFacts[0].header}}
 
       .flex-wrapper
 

@@ -45,6 +45,7 @@
     justify-content: center
     width: 95%
     margin: auto
+    height: 85vh
 
     @media (--mob-sm-lnd)
       height: 125vh
@@ -52,6 +53,9 @@
     @media (--tablet)
       width: auto
       height: 55vh
+
+    @media (--tablet) and (orientation: landscape)
+      height: 65vh
 
     @media (--laptop-rg)
       height: 80vh

@@ -7,8 +7,26 @@
     height: 65vh
     width: 100%
 
+    & h2
+
+      &:after
+        top: 1.65em
+      
+        @media (--mob-rg)
+          top: 1em
+
   & #contact
     margin-bottom: 3em
+
+    & h2
+      display: inline-block
+
+      &:after
+        width: 100%
+        top: 1.75em
+
+        @media (--mob-rg)
+          top: 1em
 
   & section
     height: auto
@@ -58,10 +76,10 @@
           & span
             
             &:nth-of-type(1)
-              transform: rotate(180deg)
+              transform: rotate(225deg)
 
             &:nth-of-type(2)
-              transform: rotate(90deg)
+              transform: rotate(135deg)
 
           & .faq-wrapper
             background-color: var(--red)

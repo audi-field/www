@@ -60,7 +60,7 @@ button
   display: inline-block
   color: var(--white) !important
   background-color: var(--red)
-  min-width: 10em 
+  min-width: 7em 
   padding-top: .25em
   text-align: center
   position: relative
@@ -70,6 +70,9 @@ button
   box-shadow: 2px 2px 6px 1px var(--boxShadow)
   text-transform: uppercase
   font-size: 1.2rem
+
+  @media (--mob-lg)
+    min-width: 10em
         
   &:hover
     cursor: pointer
@@ -162,7 +165,10 @@ section
           left: 50%
           right: 50%
           transform: translateX(-50%)
-          top: 1.65em
+          top: .9em
+
+          @media (--mob-rg)
+            top: 1.65em
 
           @media (--mob-sm-lnd)
             top: 1em

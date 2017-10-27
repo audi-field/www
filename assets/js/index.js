@@ -26,6 +26,11 @@ const checkScreenWidth = function () {
 checkScreenWidth()
 
 const countdown = () => {
+  const body = document.querySelector('body')
+
+  if (body.getAttribute('id') === 'index') {
+    console.log('this is the index page') 
+  
 
 // set kickoff date  
   const kickoff = new Date(2018, 9, 1)
@@ -71,6 +76,8 @@ const countdown = () => {
   }
 // run timer display function every second
  window.setInterval(countdownDisplay, 1000)
+
+  }
 }
 
 countdown()
@@ -127,4 +134,19 @@ function headerColorChange () {
 
 window.addEventListener('scroll', debounce(headerColorChange))
 
+// construction cam
 
+const constructionCam = () => {
+// set timestamp to current time on page load 
+  const img = document.getElementById('cameraImage')
+  const ts = new Date().getTime();
+  img.src = `https://oxblue.com/archive/a9e49108373fed879685338c5bbf0cc6/800x600.jpg?ts=${ts}`
+
+// set new timestamp every 90 seconds
+  setInterval(function() {
+    const img = document.getElementById('cameraImage')
+    const ts = new Date().getTime();
+    img.src = `https://oxblue.com/archive/a9e49108373fed879685338c5bbf0cc6/800x600.jpg?ts=${ts}`
+  },90000);
+}
+constructionCam() 

@@ -121,10 +121,13 @@
       height: 95vh
 
     @media (--mob-sm-lnd)
-      height: 165vh
+      height: 185vh
 
     @media (--tablet)
       height: 75vh
+
+    @media (--tablet-lnd)
+      height: 85vh
 
     @media (--laptop-rg)
       height: auto
@@ -147,8 +150,20 @@
         @media (--mob-rg)
           left: 18%
 
+        @media (--mob-lg)
+          left: 20%
+
         @media (--mob-sm-lnd)
+          left: 4%
+          top: -.75em
+
+        @media (--mob-rg-lnd)
           left: 9%
+          top: -.5em
+
+        @media (--mob-lg-lnd)
+          left: 12%
+          top: 0
 
         @media (--tablet)
           left: 13%
@@ -174,8 +189,19 @@
       & h2
         left: 14%
 
+        @media (--mob-rg)
+          left: 18%
+
+        @media (--mob-lg)
+          left: 20%
+
         @media (--mob-sm-lnd) 
+          left: 31%
+          top: -.5em
+
+        @media (--mob-lg-lnd)
           left: 35%
+          top: 0
 
         @media (--tablet)
           left: 38%
@@ -241,6 +267,22 @@
            
   & #construction-cam
     margin-bottom: 0
+
+    & header
+
+      & h2
+        max-width: 7em
+
+        @media (--tablet)
+          max-width: 10em
+          top: 0
+
+        &:after
+          top: 1.5em
+    
+          @media (--tablet)
+            max-width: 10em
+            top: 1em
 
     & .flex-wrapper
       justify-content: flex-end

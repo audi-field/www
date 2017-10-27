@@ -81,7 +81,7 @@ extends(src='layout.sgr')
         h2 {{ dato.index[0].constructionCam[0].heading }}
 
       .flex-wrapper
-        h3(class='button-reg') view live feed
+        a.button-reg(href='/construction-cam')   view live feed
 
     section(id='fast-facts' class='full-band')
       
@@ -94,4 +94,3 @@ extends(src='layout.sgr')
           figure
             h2 {{ item.stat }}
             p {{ item.copy }}
-

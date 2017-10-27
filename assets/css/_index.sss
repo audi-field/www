@@ -96,9 +96,6 @@
             @media (--mob-rg)
               font-size: 4.5em
   
-            @media (--mob-lg)
-              font-size: 5em
-
             @media (--tablet)
               font-size: 6em
   
@@ -118,7 +115,10 @@
 
 
   & #fan-exp
-    height: 95vh
+    height: 125vh
+
+    @media (--mob-rg)
+      height: 95vh
 
     @media (--mob-sm-lnd)
       height: 165vh
@@ -131,6 +131,7 @@
       margin-top: 2em
 
     & .flex-wrapper
+      justify-content: space-between
 
       @media (--laptop-rg)
         width: 95%
@@ -141,7 +142,10 @@
 
       & h2
         text-align: center
-        left: 20%
+        left: 14%
+
+        @media (--mob-rg)
+          left: 18%
 
         @media (--mob-sm-lnd)
           left: 9%
@@ -168,7 +172,7 @@
       z-index: 1
 
       & h2
-        left: 22%
+        left: 14%
 
         @media (--mob-sm-lnd) 
           left: 35%
@@ -198,11 +202,15 @@
           height: 97%
           width: 100%
           background: var(--bgRed) 
-          opacity: 0
           transition: opacity .5s
 
+          @media (--laptop-rg)
+            opacity: 0
+
         &:hover:after
-          opacity: 1
+
+          @media (--laptop-rg)
+            opacity: 1
 
         & img
           width: 100%
@@ -215,14 +223,18 @@
           top: 0
           left: 0
           color: white
-          opacity: 0
           transition: opacity .5s
           height: 97%
           width: 100%
           z-index: 1
 
+          @media (--laptop-rg)
+            opacity: 0
+
           &:hover
-            opacity: 1
+
+            @media (--laptop-rg)
+              opacity: 1
 
           & h3
             border-bottom: 1px solid white
@@ -249,6 +261,7 @@
     display: flex
     flex-direction: column
     justify-content: center
+    margin-bottom: 0
 
     & .header
       flex: 1 1 auto

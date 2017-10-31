@@ -30,10 +30,12 @@ extends(src='layout.sgr')
 
       .flex-wrapper.single-block
 
-        figure
+        a(href='/{{ dato.media_new[0].featuredPressRelease[0].slug }}')
 
-          h3 {{ dato.media_new[0].featuredPressRelease[0].title }} 
-          p {{ dato.media_new[0].featuredPressRelease[0].previewCopy }}
+          figure
+
+            h3 {{ dato.media_new[0].featuredPressRelease[0].title }} 
+            p {{ dato.media_new[0].featuredPressRelease[0].previewCopy }}
 
     section#media-index
 

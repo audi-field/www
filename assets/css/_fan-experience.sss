@@ -13,7 +13,7 @@
     margin-bottom: 8em
 
   & #fan-exp
-    height: 85vh
+    height: 110vh
 
     @media (--mob-sm-lnd)
       height: 145vh
@@ -28,7 +28,13 @@
       height: 75vh
 
     & h2
-      left: 18%
+      left: 13%
+
+      @media (--mob-rg)
+        left: 18%
+
+      @media (--mob-lg)
+        left: 20%
 
       @media (--laptop-rg)
         left: 12%
@@ -105,6 +111,9 @@
       & .cta 
         margin: 4em auto
         text-align: center
+
+        & .button-reg
+          min-width: 10em
 
   & #match-exp
 

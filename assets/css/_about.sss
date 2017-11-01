@@ -28,6 +28,45 @@
         @media (--mob-rg)
           top: 1em
 
+  & #map
+    display: flex
+    flex-direction: column
+    margin: 4em auto
+
+    @media (--tablet-lnd)
+      flex-direction: row
+
+    & iframe
+      width: 100%
+      flex: 2 1 auto
+      order: 2
+
+      @media (--tablet-lnd)
+        order: 1
+
+    & #info
+      display: flex
+      flex-direction: column
+      flex: 1 1 auto
+      justify-content: center
+      text-align: center
+      padding: 2em
+      order: 1
+      
+      & h2 
+        display: inline-block
+        border-bottom: 2px solid var(--red)
+        padding-bottom: .25em
+        width: max-content
+        margin: 0 auto .5em 
+
+      & p
+        margin: 0 auto
+        max-width: 20em
+
+        @media(--tablet-lnd)
+          max-width: 100%
+
   & section
     height: auto
     width: 80%

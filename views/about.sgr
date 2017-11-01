@@ -41,6 +41,15 @@ extends(src='layout.sgr')
 
         button.button-reg submit
 
+    #map
+
+      iframe(height='500' width='750' frameborder='0' style='border: 0' src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBwLdFbpnQkEQ4hsd2Rvl6M-SGn9sL0GC0&q=Audi+Field&center={{ dato.about[0].stadiumLocation[0].location.latitude }},{{ dato.about[0].stadiumLocation[0].location.longitude }}&zoom=13")
+
+      #info
+
+        h2 {{ dato.about[0].stadiumLocation[0].heading }}
+
+        p(md) {{ dato.about[0].stadiumLocation[0].copy}}
     #faq-wrap
 
       section#prem-seat

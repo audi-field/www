@@ -74,7 +74,11 @@ const countdown = () => {
     daysDisp.innerHTML = `${days}:`
     hoursDisp.innerHTML = `${hours}:`
     minDisp.innerHTML = `${minutes}:`
+    if (seconds < 10) {
+      secDisp.innerHTML = `0${seconds}`
+    } else {
     secDisp.innerHTML = `${seconds}`
+      }
   }
 // run timer display function every second
  window.setInterval(countdownDisplay, 1000)

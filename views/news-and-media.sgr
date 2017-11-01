@@ -30,12 +30,11 @@ extends(src='layout.sgr')
 
       .flex-wrapper.single-block
 
-        a(href='/{{ dato.media_new[0].featuredPressRelease[0].slug }}')
+        figure
 
-          figure
-
-            h3 {{ dato.media_new[0].featuredPressRelease[0].title }} 
-            p {{ dato.media_new[0].featuredPressRelease[0].previewCopy }}
+          h3 {{ dato.media_new[0].featuredPressRelease[0].title }} 
+          p {{ dato.media_new[0].featuredPressRelease[0].previewCopy }}
+          a.button-clear(href='/press-release/{{ dato.media_new[0].featuredPressRelease[0].slug }}') read more
 
     section#media-index
 

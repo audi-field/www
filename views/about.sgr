@@ -29,11 +29,11 @@ extends(src='layout.sgr')
 
       form(name='join_us' netlify-honeypot='bot_field' netlify)
 
-        input(placeholder='first name' type='text' name='first_name')
+        input(placeholder='first name' type='text' name='first_name' required)
 
-        input(placeholder='last name' type='text' name='last_name')
+        input(placeholder='last name' type='text' name='last_name' required)
 
-        input(placeholder='email' type='email' name='email')
+        input(placeholder='email' type='email' name='email' required)
 
         input(placeholder='phone' type='tel' name='tel')
 

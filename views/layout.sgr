@@ -5,6 +5,7 @@ html
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='author' content='asasmith')
     meta(name='viewport' content='width=device-width, initial-scale=1')
+    include(src='/includes/_ga.sgr')  
 
     block(name='title')
       title {{ dato._meta.globalSeo.fallbackSeo.title }}

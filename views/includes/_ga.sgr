@@ -1,0 +1,3 @@
+// google tag manager
+  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-6382100-6")
+  script window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-6382100-6');

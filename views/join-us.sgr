@@ -12,7 +12,7 @@ extends(src='layout.sgr')
 
   block(name='content')
 
-    #hero(style='background: url(https://{{ dato._meta.imgixHost + dato.join[0].heroImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+    #hero(style='background: url(https://{{ dato._meta.imgixHost + dato.join[0].heroImage.path }}?fm=jpeg&amp;fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 
 
     section#join.mod-block.tab.center-tab
@@ -34,9 +34,9 @@ extends(src='layout.sgr')
       .flex-wrapper
 
         .block
-          img(src='//{{ dato._meta.imgixHost + dato.join[0].seatingMapPricing[0].seatingMap.path }}?fit=clamp&;w=1920&amp;h=1280')
+          img(src='//{{ dato._meta.imgixHost + dato.join[0].seatingMapPricing[0].seatingMap.path }}?fm=jpeg&amp;fit=clamp&;w=1920&amp;h=1280')
 
-    section#audi-field-prev.tab.center-tab.full-band(style='background: url(https://{{ dato._meta.imgixHost + dato.join[0].audiFieldExpCenter[0].backgroundImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+    section#audi-field-prev.tab.center-tab.full-band(style='background: url(https://{{ dato._meta.imgixHost + dato.join[0].audiFieldExpCenter[0].backgroundImage.path }}?fm=jpeg&amp;fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 
       header
         include(src='includes/_tab.sgr')
@@ -48,7 +48,7 @@ extends(src='layout.sgr')
       each(loop='item in dato.join[0].audiFieldExpCenter[0].photosToPreviewCenter')
 
         figure
-          img(src='//{{ dato._meta.imgixHost + item.path }}?fit=crop&amp;w=500&amp;h=400')
+          img(src='//{{ dato._meta.imgixHost + item.path }}?fm=jpeg&amp;fit=crop&amp;w=500&amp;h=400')
 
     section#content
       .copy(md) {{ dato.join[0].audiFieldExpCenter[0].copy }}

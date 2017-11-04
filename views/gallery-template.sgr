@@ -24,7 +24,7 @@ html
 
       include(src='/includes/_header.sgr')
 
-      #hero(style='background: url(https://{{ dato._meta.imgixHost + item.featImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+      #hero(style='background: url(https://{{ dato._meta.imgixHost + item.featImage.path }}?fm=jpeg&amp;fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 
       section#gallery-index.tab.center-tab.full-band
 
@@ -39,7 +39,7 @@ html
           each(loop='image in item.gallery')
 
             figure
-              img(src='//{{ dato._meta.imgixHost + image.path }}?fit=crop&amp;w=350&amp;h=200')
+              img(src='//{{ dato._meta.imgixHost + image.path }}?fm=jpeg&amp;fit=crop&amp;w=350&amp;h=200')
         
     include(src='/includes/_footer.sgr')
 

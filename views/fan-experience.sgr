@@ -12,9 +12,9 @@ extends(src='layout.sgr')
 
   block(name='content')
 
-    #hero(style='background: url(https://{{ dato._meta.imgixHost + dato.fan_exp[0].heroImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+    #hero(style='background: url(https://{{ dato._meta.imgixHost + dato.fan_exp[0].heroImage.path }}?fm=jpeg&amp;fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 
-    section#fan-exp.tab.left-tab.full-band(style='background: url(https://{{ dato._meta.imgixHost + dato.fan_exp[0].bgImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+    section#fan-exp.tab.left-tab.full-band(style='background: url(https://{{ dato._meta.imgixHost + dato.fan_exp[0].bgImage.path }}?fm=jpeg&amp;fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 
       header
 
@@ -55,7 +55,7 @@ extends(src='layout.sgr')
 
         each(loop='gallery in dato.fan_exp[0].suitesClubAreaGallery')
 
-          .block(style='background: url(https://{{ dato._meta.imgixHost + gallery.featImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+          .block(style='background: url(https://{{ dato._meta.imgixHost + gallery.featImage.path }}?fm=jpeg&amp;fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 
             figure
               h3 {{ gallery.heading }}
@@ -66,7 +66,7 @@ extends(src='layout.sgr')
         figure.cta
           a.button-reg(href='http://audifield.io-media.com/web/index.html' target='_blank') virtual seatmap
 
-    section#match-exp.full-band.tab.right-tab(style='background: url(https://{{ dato._meta.imgixHost + dato.fan_exp[0].matchdayExperienceGallery.featImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+    section#match-exp.full-band.tab.right-tab(style='background: url(https://{{ dato._meta.imgixHost + dato.fan_exp[0].matchdayExperienceGallery.featImage.path }}?fm=jpeg&amp;fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 
       header
         svg(viewBox='0 10 350 50')

@@ -16,9 +16,9 @@ extends(src='layout.sgr')
 
   block(name='content')
 
-    #hero(style='background: url(https://{{ dato._meta.imgixHost + dato.stadium[0].heroImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+    #hero(style='background: url(https://{{ dato._meta.imgixHost + dato.stadium[0].heroImage.path }}?fm=jpeg&amp;fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 
-    section#site.full-band.tab.center-tab(style='background: url(https://{{ dato._meta.imgixHost + dato.stadium[0].constructionPhotoAlbum[0].featImage.path}}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+    section#site.full-band.tab.center-tab(style='background: url(https://{{ dato._meta.imgixHost + dato.stadium[0].constructionPhotoAlbum[0].featImage.path}}?fm=jpeg&amp;fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 
       header
         svg(viewBox='0 10 350 50')
@@ -39,7 +39,7 @@ extends(src='layout.sgr')
 
       each(loop='image in dato.stadium[0].constructionPhotoAlbum[0].photos')
         figure
-          img(src='//{{ dato._meta.imgixHost + image.path }}?fit=clamp&amp;w=250&amp;h=150')
+          img(src='//{{ dato._meta.imgixHost + image.path }}?fm=jpeg&amp;fit=clamp&amp;w=250&amp;h=150')
 
     section#video
       iframe(width='660' height='415' src='{{ dato.stadium[0].flyThroughVideoTile[0].flyThroughVideo.url }}' frameborder='0' allowfullscreen)   
@@ -60,7 +60,7 @@ extends(src='layout.sgr')
       .flex-wrapper
 
         .block
-          img(src='//{{ dato._meta.imgixHost + dato.stadium[0].stadiumInfographic[0].infographic.path }}?fit=clamp&;w=1920&amp;h=1280')
+          img(src='//{{ dato._meta.imgixHost + dato.stadium[0].stadiumInfographic[0].infographic.path }}?fm=jpeg&amp;fit=clamp&;w=1920&amp;h=1280')
       
         figure.cta
           a.button-reg(href='http://audifield.io-media.com/web/index.html' target='_blank') virtual seatmap

@@ -12,9 +12,9 @@ extends(src='layout.sgr')
 
   block(name='content')
 
-    #hero(style='background: url(https://{{ dato._meta.imgixHost + dato.media_new[0].bgImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+    #hero(style='background: url(https://{{ dato._meta.imgixHost + dato.media_new[0].bgImage.path }}?fm=jpeg&amp;fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 
-    section#feat.tab.left-tab.full-band(style='background: url(https://{{ dato._meta.imgixHost + dato.media_new[0].featuredPressRelease[0].heroImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+    section#feat.tab.left-tab.full-band(style='background: url(https://{{ dato._meta.imgixHost + dato.media_new[0].featuredPressRelease[0].heroImage.path }}?fm=jpeg&amp;fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 
       header
 
@@ -44,7 +44,7 @@ extends(src='layout.sgr')
 
           a(href='/press-release/{{ post.slug }}')
             figure.pr
-              img(src='//{{ dato._meta.imgixHost + post.heroImage.path}}?fit=crop&amp;w=400&amp;h=300')
+              img(src='//{{ dato._meta.imgixHost + post.heroImage.path}}?fm=jpeg&amp;fit=crop&amp;w=400&amp;h=300')
 
               figcaption
                 p press release
@@ -54,7 +54,7 @@ extends(src='layout.sgr')
 
           a(href='/galleries/{{ post.slug }}')
             figure.gallery
-              img(src='//{{ dato._meta.imgixHost + post.featImage.path}}?fit=crop&amp;w=400&amp;h=300')
+              img(src='//{{ dato._meta.imgixHost + post.featImage.path}}?fm=jpeg&amp;fit=crop&amp;w=400&amp;h=300')
 
               figcaption
                 p gallery

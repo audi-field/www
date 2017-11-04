@@ -1,4 +1,4 @@
-footer(style='background: url(https://{{ dato._meta.imgixHost + dato.footer[0].bgImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+footer(style='background: url(https://{{ dato._meta.imgixHost + dato.footer[0].bgImage.path }}?fm=jpeg&amp;fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 
   #tint
 

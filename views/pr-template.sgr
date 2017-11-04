@@ -23,9 +23,9 @@ html
   body(id='pr')
     include(src='/includes/_header.sgr')
 
-    #hero(style='background: url(https://{{ dato._meta.imgixHost + dato.media_new[0].bgImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+    #hero(style='background: url(https://{{ dato._meta.imgixHost + dato.media_new[0].bgImage.path }}?fm=jpeg&amp;fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 
-    section#feat.tab.left-tab.full-band(style='background: url(https://{{ dato._meta.imgixHost + item.heroImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+    section#feat.tab.left-tab.full-band(style='background: url(https://{{ dato._meta.imgixHost + item.heroImage.path }}?fm=jpeg&amp;fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 
       header
         include(src='/includes/_tab.sgr')

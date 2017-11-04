@@ -12,9 +12,9 @@ extends(src='layout.sgr')
 
   block(name='content')
 
-    #hero(style='background: url(https://{{ dato._meta.imgixHost + dato.about[0].bgImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+    #hero(style='background: url(https://{{ dato._meta.imgixHost + dato.about[0].bgImage.path }}?fm=jpeg&amp;fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 
-    section#feat.tab.center-tab.full-band(style='background: url(https://{{ dato._meta.imgixHost + dato.about[0].heroImage.path }}?fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+    section#feat.tab.center-tab.full-band(style='background: url(https://{{ dato._meta.imgixHost + dato.about[0].heroImage.path }}?fm=jpeg&amp;fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 
       header
         include(src='/includes/_tab.sgr')

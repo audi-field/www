@@ -79,6 +79,9 @@ module.exports = {
           name: 'transportation_qa'
         },
         {
+          name: 'social_account'
+        },
+        {
           name: 'photo_gallery',
           template: {
             path: 'views/gallery-template.sgr',

@@ -42,7 +42,7 @@ extends(src='layout.sgr')
           img(src='//{{ dato._meta.imgixHost + image.path }}?fm=jpeg&amp;fit=clamp&amp;w=250&amp;h=150')
 
     section#video
-      iframe(width='660' height='415' src='{{ dato.stadium[0].flyThroughVideoTile[0].flyThroughVideo.url }}' frameborder='0' allowfullscreen)   
+      iframe(width='1000' height='600' src='{{ dato.stadium[0].flyThroughVideoTile[0].flyThroughVideo.url }}' frameborder='0' allowfullscreen)   
 
     section#seating.mod-block.tab.center-tab
 

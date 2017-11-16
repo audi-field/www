@@ -13,8 +13,8 @@ extends(src='layout.sgr')
   block(name='content')
 
     #bgvid-wrap
-      video(class='bgvid' poster='/img/audi-poster.jpg' autoplay loop muted)
-        source(src='/img/audiField_releaseVideo.mp4' type='video/mp4')
+      video(class='bgvid' poster='/img/audi-field-bgvid-poster.jpg' autoplay loop muted)
+        source(src='/img/audi-field-short-compressed.mp4' type='video/mp4')
 
       #tinted
         #countdown-wrap

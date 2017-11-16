@@ -45,20 +45,35 @@
     justify-content: center
     width: 95%
     margin: auto
-    height: 85vh
+    height: auto
+    margin-bottom: 3em
 
     @media (--mob-sm-lnd)
-      height: 125vh
+      height: auto
 
     @media (--tablet)
       width: auto
-      height: 55vh
+      height: auto
 
     @media (--tablet) and (orientation: landscape)
-      height: 65vh
+      height: auto
 
     @media (--laptop-rg)
-      height: 80vh
+      height: auto
+
+    & iframe
+      height: 50vh
+
+      @media (--mob-sm-lnd)
+        height: 80vh
+
+      @media (--tablet)
+        height: 50vh
+
+      
+
+      @media (--laptop-rg)
+        height: 80vh
 
   & #seating
 

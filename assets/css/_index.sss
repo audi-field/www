@@ -1,19 +1,13 @@
 #index
   width: 100%
-
-  & #top-nav
-
-    @media (--laptop-rg)
-      background: rgba(255, 255, 255, 0.0) !important 
   
   & #top-nav
-    transition: background .5s ease-in
+    background-color: color(var(--white) a(0%)) !important
+    transition: background-color .5s ease-in
 
     &.bg
-      background: linear-gradient(0deg, transparent 60%, var(--bgWhite) 62%, white 64%) !important   
-
-      @media (--laptop-rg)
-        background: linear-gradient(0deg, transparent, var(--bgWhite), white 4%) !important   
+  
+      background-color: var(--white) !important
 
       & #logo
 
@@ -52,7 +46,8 @@
     & #tinted
       height: 102vh
       width: 100%
-      background: linear-gradient(0deg,  var(--white) 10%, var(--bgVidWhite))
+      background: linear-gradient(0deg,  var(--white) 10%, var(--bgVidWhite) 20%, color(var(--white) a(0%)) 80%, var(--bgVidWhite) 90%)
+
       position: absolute
       top: 0
       right: 0

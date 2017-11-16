@@ -7,25 +7,36 @@ footer(style='background: url(https://{{ dato._meta.imgixHost + dato.footer[0].b
     p.button-reg.fevo-button buy tickets
 
   ul#social
-    li: a(href='https://www.instagram.com/dcunited/' target='_blank')
-      | 
-        svg(viewBox='0 0 56 56' class='icon icon-ig')
-          use(xlink:href='#icon-ig')
 
-    li: a(href='https://www.facebook.com/dcunited/' target='_blank')
-      | 
-        svg(viewBox='0 0 56 56' class='icon icon-facebook')
-          use(xlink:href='#icon-facebook')
+    each(loop='account in dato.social_account')
 
-    li: a(href='https://twitter.com/dcunited' target='_blank')
-      | 
-        svg(viewBox='0 0 56 56' class='icon icon-twitter')
-          use(xlink:href='#icon-twitter')
+      if(condition='account.title === "Instagram"')
 
-    li: a(href='https://www.youtube.com/user/dcunited' target='_blank')
-      | 
-        svg(viewBox='0 0 56 56' class='icon icon-youtube')
-          use(xlink:href='#icon-youtube')
+        li: a(href='{{ account.socialUrl }}' target='_blank')
+          | 
+            svg(viewBox='0 0 56 56' class='icon icon-ig')
+              use(xlink:href='#icon-ig')
+      
+      elseif(condition='account.title === "Facebook"')
+
+        li: a(href='{{ account.socialUrl }}' target='_blank')
+          | 
+            svg(viewBox='0 0 56 56' class='icon icon-facebook')
+              use(xlink:href='#icon-facebook')
+
+      elseif(condition='account.title === "Twitter"')
+
+        li: a(href='{{ account.socialUrl }}' target='_blank')
+          | 
+            svg(viewBox='0 0 56 56' class='icon icon-twitter')
+              use(xlink:href='#icon-twitter')
+
+      elseif(condition='account.title === "YouTube"')
+
+        li: a(href='{{ account.socialUrl }}' target='_blank')
+          | 
+            svg(viewBox='0 0 56 56' class='icon icon-youtube')
+              use(xlink:href='#icon-youtube')
 
     li #AudiField
 

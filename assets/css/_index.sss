@@ -9,17 +9,6 @@
   
       background-color: var(--white) !important
 
-      & #logo
-
-        & img
-          width: 4em
-
-          @media (--tablet-lnd)
-            width: 6em
-
-          @media (--laptop-rg)
-            width: 4em
-
   & #bgvid-wrap
     width: 100%
     height: 102vh
@@ -116,22 +105,9 @@
 
 
   & #fan-exp
-    height: 125vh
-
-    @media (--mob-rg)
-      height: 95vh
-
-    @media (--mob-sm-lnd)
-      height: 185vh
-
-    @media (--tablet)
-      height: 75vh
-
-    @media (--tablet-lnd)
-      height: 85vh
+    height: auto
 
     @media (--laptop-rg)
-      height: auto
       margin-top: 2em
 
     & .flex-wrapper
@@ -206,6 +182,9 @@
 
         @media (--tablet)
           left: 38%
+
+        @media (--tablet-lnd)
+          left: 55%
 
         @media (--laptop-rg)
           left: 61%

@@ -4,6 +4,7 @@ header#top-nav
   transition: all .25s ease-in
   position: fixed
   box-shadow: none
+  height: 6.5em
 
   @media (--tablet-lnd)
     padding-top: 1em
@@ -44,8 +45,11 @@ header#top-nav
           height: 1em
   
         & #nav-menu 
-          transform: translateY(0)
+          transform: translateY(-0%)
           box-shadow: 0 4px 8px 1px var(--boxShadow)
+
+          @media (--tablet)
+            transform: translateY(-7%)
 
           & #tix
             transform: translateY(0)
@@ -94,6 +98,9 @@ header#top-nav
       padding: 1em
       box-shadow: none
 
+      @media (--tablet)
+        transform: translateY(-107%)
+
       @media (--laptop-rg)
         flex-direction: row
         justify-content: space-around
@@ -130,7 +137,7 @@ header#top-nav
         transition: width .25s ease-in
 
         @media (--tablet-lnd)
-          width: 6em
+          width: 4em
 
         @media (--laptop-rg)
           width: 4em

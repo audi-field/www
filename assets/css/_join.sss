@@ -10,16 +10,16 @@
           top: 1em
 
   & #video
-    height: 75vh
+    height: auto
 
     @media (--mob-sm-lnd)
-      height: 155vh
+      height: auto
 
     @media (--tablet)
-      height: 60vh
+      height: auto
 
     @media (--laptop-rg)
-      height: 80vh
+      height: auto
 
     & iframe
       margin-top: 8em
@@ -32,6 +32,12 @@
         
         &:after
           top: 1em
+
+          @media (--mob-rg)
+            top: 2em
+
+          @media (--mob-sm-lnd)
+            top: 1em
 
     & .flex-wrapper
       margin: 5em auto 0
@@ -59,6 +65,9 @@
           @media (--mob-sm-lnd)
             width: 60%
 
+          @media (--tablet)
+            width: 95%
+
   & #prev-center-gallery
     display: flex
     flex-direction: column
@@ -67,13 +76,7 @@
       flex-direction: row
 
     @media (--tablet)
-      height: 25vh
-
-    @media (--tablet-lnd)
-      height: 35vh
-
-    @media (--laptop-rg)
-      height: 75vh
+      height: auto
 
     & figure
       width: 90%
@@ -91,11 +94,10 @@
 
     @media (--tablet)
       width: 75%
-      height: 35vh
+      height: auto
 
     @media (--laptop-rg)
       width: 55%
-      height: 50vh
     
     & .copy
       padding: 1em

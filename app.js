@@ -87,6 +87,13 @@ module.exports = {
             path: 'views/gallery-template.sgr',
             output: (gallery) => { return `galleries/${gallery.slug}.html`}
           }
+        },
+        {
+          name: 'seat',
+          template: {
+            path: 'views/seating-template.sgr',
+            output: (seat) => { return `seating/${seat.slug}.html`}
+          }
         }
       ],
       json: 'data.json'

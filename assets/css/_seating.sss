@@ -1,0 +1,47 @@
+#seats
+
+  & #seating
+    height: auto
+
+    & header
+
+      & h2
+        max-width: 7em
+
+        &:after
+          top: 1em
+
+    & .flex-wrapper
+      flex-direction: column
+      padding-top: 4em
+
+      & .block
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        height: 80vh
+        width: 95%
+        margin: 0 auto 4em
+
+        @media (--tablet)
+          width: 80%
+          height: 30vh
+
+        @media (--laptop-rg)
+          height: 80vh
+
+        &:nth-of-type(even)
+          align-items: flex-end
+
+        & figure
+          height: auto
+
+          & h3
+            border-bottom: 2px solid var(--white)
+            display: inline-block
+
+          & ul
+
+            & li
+              list-style: disc
+          

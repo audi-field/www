@@ -58,8 +58,9 @@ extends(src='layout.sgr')
           .block(style='background: url(https://{{ dato._meta.imgixHost + gallery.featImage.path }}?fm=jpeg&amp;fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 
             figure
-              h3 {{ gallery.heading }}
-              p(md) {{ gallery.copy }} 
+              a(href='/seating/{{ gallery.seatingTemplate }}')
+                h3 {{ gallery.heading }}
+                p(md) {{ gallery.copy }} 
 
             a.button-white(href='/galleries/{{ gallery.slug }}') view gallery
 

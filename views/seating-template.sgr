@@ -42,7 +42,6 @@ html
               h3 {{ block.title }}
               .copy(md) {{ block.copy }}
 
-
     include(src='/includes/_footer.sgr')
 
     include(src='/includes/_icon-sprite.sgr')

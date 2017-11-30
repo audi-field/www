@@ -56,6 +56,8 @@
           color: white
           width: 90%
           align-self: flex-start
+          background-color: var(--bgRed)
+          padding: 1em
 
           @media (--tablet-lnd)
             width: 60%
@@ -64,22 +66,19 @@
             width: 40%
             align-self: center
 
-          & a 
-            display: block
-            padding: 1em
-            background-color: var(--bgRed)
+          & h3
+            border-bottom: 1px solid #fff
+            display: inline-block
+
+          & li
+            list-style-type: disc
+            margin-left: 1em
+
+          & .button-clear
             transition: background-color .5s ease
 
             &:hover
-              background-color: color(var(--bgRed) a(70%))
-
-            & h3
-              border-bottom: 1px solid #fff
-              display: inline-block
-
-            & li
-              list-style-type: disc
-              margin-left: 1em
+              background-color: color(var(--bgRed) a(60%)) 
 
         & .button-white
           align-self: flex-end

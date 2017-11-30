@@ -60,7 +60,7 @@ extends(src='layout.sgr')
             figure
               h3 {{ gallery.heading }}
               p(md) {{ gallery.copy }} 
-              a.button-clear(href='#') learn more
+              a.button-clear(href='/seating/{{ gallery.seatingTemplate }}') learn more
 
             a.button-white(href='/galleries/{{ gallery.slug }}') view gallery
 

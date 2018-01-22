@@ -1,12 +1,8 @@
-console.log('fevo file')
-
 Fevo.init({
           publisherKey: '730a4d05-1716-4788-80bc-c16d430077ab',
           env: 'prod'
       })
 Fevo.purchase('.fevo-button')
-
-console.log('you can use ES6 here : )')
 
 // get screen size
 const checkScreenWidth = function () {
@@ -29,13 +25,9 @@ const countdown = () => {
   const body = document.querySelector('body')
 
   if (body.getAttribute('id') === 'index') {
-    console.log('this is the index page') 
-  
 
 // set kickoff date  
-  const kickoff = new Date(2018, 5, 30, 19)
-
-    console.log(kickoff)
+  const kickoff = new Date(2018, 6, 14, 19) // sat july 14 7:00pm
 
 // create variables
   let seconds  

@@ -2,7 +2,7 @@ console.log('timer here')
 const countdown = () => {
 
 // set kickoff date  
-  const kickoff = new Date(2018, 9, 1)
+  const kickoff = new Date(2018, 6, 14, 19)
 
 // create variables
   let seconds  

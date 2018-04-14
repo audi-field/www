@@ -4,9 +4,9 @@ header(id='top-nav')
 
     input(type='checkbox')
     #hamburger
-      span  
-      span  
-      span  
+      span
+      span
+      span
 
     ul#nav-menu
       li: a(href='/the-stadium') the stadium
@@ -14,7 +14,7 @@ header(id='top-nav')
       li: a(href='/news-and-media') news and media
       li: a(href='/join-us') join us
       li: a(href='/about') about
-      li(id='tix' class='button-reg fevo-button' data-event-key='DC-United--Audi-Field-Season-Deposits-1mJSrCJ8') buy tickets
+      li: a(href='http://dcunitedportal.io-media.com/event-list-buy' id'tix' class='button-reg') buy tickets
     #logo
       a(href='/')
         img(src='/img/dcu-logo.png')

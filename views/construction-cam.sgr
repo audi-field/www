@@ -16,6 +16,14 @@ extends(src='layout.sgr')
 
   block(name='content')
 
+    .bg-space
+
+    section#cam.mod-block.tab.center-tab
+
+      header
+        include(src='includes/_tab.sgr')
+        h2 live cam
+
     #hero.webcam-wrapper
 
       figure

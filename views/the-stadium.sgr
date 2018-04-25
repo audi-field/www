@@ -25,7 +25,7 @@ extends(src='layout.sgr')
           defs
             filter#shadow
               feDropShadow(dx='0' dy='0' stdDeviation='5')
-            style .cls-1{fill: white} 
+            style .cls-1{fill: white}
 
           use(xlink:href='#icon-tab')
 
@@ -33,7 +33,7 @@ extends(src='layout.sgr')
 
       .flex-wrapper.single-block
         figure
-          p {{ dato.stadium[0].constructionPhotoAlbum[0].copy }} 
+          p {{ dato.stadium[0].constructionPhotoAlbum[0].copy }}
 
     section#gallery
 
@@ -42,7 +42,7 @@ extends(src='layout.sgr')
           img(src='//{{ dato._meta.imgixHost + image.path }}?fm=jpeg&amp;fit=clamp&amp;w=250&amp;h=150')
 
     section#video
-      iframe(width='1000' height='600' src='{{ dato.stadium[0].flyThroughVideoTile[0].flyThroughVideo.url }}' frameborder='0' allowfullscreen)   
+      iframe(width='1000' height='600' src='{{ dato.stadium[0].flyThroughVideoTile[0].flyThroughVideo.url }}' frameborder='0' allowfullscreen)
 
     section#seating.mod-block.tab.center-tab
 
@@ -51,7 +51,7 @@ extends(src='layout.sgr')
           defs
             filter#shadow
               feDropShadow(dx='0' dy='0' stdDeviation='5')
-            style .cls-1{fill: white} 
+            style .cls-1{fill: white}
 
           use(xlink:href='#icon-tab')
 
@@ -61,8 +61,8 @@ extends(src='layout.sgr')
 
         .block
           img(src='//{{ dato._meta.imgixHost + dato.stadium[0].stadiumInfographic[0].infographic.path }}?fm=jpeg&amp;fit=clamp&;w=1920&amp;h=1280')
-      
+
         figure.cta
-          a.button-reg(href='http://audifield.io-media.com/web/index.html' target='_blank') virtual seatmap
+          a.button-reg(href='http://dcunitedportal.io-media.com/event-list-buy' target='_blank') virtual seatmap
 
 

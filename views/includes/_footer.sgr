@@ -4,7 +4,7 @@ footer(style='background: url(https://{{ dato._meta.imgixHost + dato.footer[0].b
 
   #buy-tix
     p {{ dato.footer[0].buyTixCopy }}
-    a.button-reg(href='http://dcunitedportal.io-media.com/event-list-buy') buy tickets
+    a.button-reg(href='http://dcunitedportal.io-media.com/return_url/MFDC18') buy tickets
 
   ul#social
 

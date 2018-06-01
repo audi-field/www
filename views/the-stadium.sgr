@@ -63,6 +63,6 @@ extends(src='layout.sgr')
           img(src='//{{ dato._meta.imgixHost + dato.stadium[0].stadiumInfographic[0].infographic.path }}?fm=jpeg&amp;fit=clamp&;w=1920&amp;h=1280')
 
         figure.cta
-          a.button-reg(href='http://dcunitedportal.io-media.com/event-list-buy' target='_blank') virtual seatmap
+          a.button-reg(href='http://dcunitedportal.io-media.com/return_url/MFDC18' target='_blank') virtual seatmap
 
 

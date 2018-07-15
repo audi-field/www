@@ -17,14 +17,6 @@ extends(src='layout.sgr')
         source(src='/img/audi-field-short-compressed.mp4' type='video/mp4')
 
       #tinted
-        #countdown-wrap
-          header
-            h2 countdown to kick off
-          #counter
-            p#days 
-            p#hours 
-            p#minutes 
-            p#seconds 
 
     section(id="fan-exp" class='full-band tab center-tab' style='background: url(https://{{ dato._meta.imgixHost + dato.fan_exp[0].bgImage.path }}?fm=jpeg&amp;fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 
@@ -72,7 +64,7 @@ extends(src='layout.sgr')
 
             figcaption
               h3: a(href='/galleries/{{ item.slug }}') {{ item.heading }}
-    
+
     section(id="construction-cam" class='full-band tab center-tab' style='background: url(https://{{ dato._meta.imgixHost + dato.index[0].constructionCam[0].bgImage.path }}?fm=jpeg&amp;fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
       header
 
@@ -84,7 +76,7 @@ extends(src='layout.sgr')
         a.button-reg(href='/construction-cam')   view live feed
 
     section(id='fast-facts' class='full-band')
-      
+
       h2.header {{ dato.index[0].fastFacts[0].header}}
 
       .flex-wrapper

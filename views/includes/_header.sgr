@@ -14,7 +14,7 @@ header(id='top-nav')
       li: a(href='/news-and-media') news and media
       li: a(href='/join-us') join us
       li: a(href='/about') about
-      li: a(href='http://dcunitedportal.io-media.com/return_url/MFDC18' id'tix' class='button-reg') buy tickets
+      li: a(href='https://www.dcunited.com/tickets' target='_blank' class='button-reg') buy tickets
     #logo
       a(href='/')
         img(src='/img/dcu-logo.png')

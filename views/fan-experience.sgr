@@ -22,7 +22,7 @@ extends(src='layout.sgr')
           defs
             filter#shadow
               feDropShadow(dx='0' dy='0' stdDeviation='5')
-            style .cls-1{fill: white} 
+            style .cls-1{fill: white}
 
           use(xlink:href='#icon-tab')
 
@@ -32,11 +32,11 @@ extends(src='layout.sgr')
 
         figure
           h3 {{ dato.fan_exp[0].hospitality[0].header }}
-          p {{ dato.fan_exp[0].hospitality[0].copy }} 
+          p {{ dato.fan_exp[0].hospitality[0].copy }}
 
         figure
           h3 {{ dato.fan_exp[0].premiumAreas[0].header }}
-          p {{ dato.fan_exp[0].premiumAreas[0].copy }} 
+          p {{ dato.fan_exp[0].premiumAreas[0].copy }}
 
     section#clubs-suites.mod-block.tab.center-tab
 
@@ -45,7 +45,7 @@ extends(src='layout.sgr')
           defs
             filter#shadow
               feDropShadow(dx='0' dy='0' stdDeviation='5')
-            style .cls-1{fill: white} 
+            style .cls-1{fill: white}
 
           use(xlink:href='#icon-tab')
 
@@ -59,12 +59,9 @@ extends(src='layout.sgr')
 
             figure
               h3 {{ gallery.heading }}
-              p(md) {{ gallery.copy }} 
+              p(md) {{ gallery.copy }}
 
             a.button-white(href='/galleries/{{ gallery.slug }}') view gallery
-
-        figure.cta
-          a.button-reg(href='http://audifield.io-media.com/web/index.html' target='_blank') virtual seatmap
 
     section#match-exp.full-band.tab.right-tab(style='background: url(https://{{ dato._meta.imgixHost + dato.fan_exp[0].matchdayExperienceGallery.featImage.path }}?fm=jpeg&amp;fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
 
@@ -73,7 +70,7 @@ extends(src='layout.sgr')
           defs
             filter#shadow
               feDropShadow(dx='0' dy='0' stdDeviation='5')
-            style .cls-1{fill: white} 
+            style .cls-1{fill: white}
 
           use(xlink:href='#icon-tab')
 
@@ -81,5 +78,5 @@ extends(src='layout.sgr')
 
       .flex-wrapper.single-block
         figure
-          p {{ dato.fan_exp[0].matchdayExperienceGallery.copy }} 
+          p {{ dato.fan_exp[0].matchdayExperienceGallery.copy }}
           a.button-clear(href='/galleries/{{ dato.fan_exp[0].matchdayExperienceGallery.slug}}') view gallery

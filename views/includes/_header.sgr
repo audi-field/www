@@ -18,4 +18,5 @@ header(id='top-nav')
     #logo
       a(href='/')
         img(src='/img/dcu-logo.png')
-
+      a(href='https://www.audiusa.com/' target='_blank')
+        img(src='/img/AudiField-BLK.png')

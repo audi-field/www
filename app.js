@@ -61,7 +61,7 @@ module.exports = {
           name: 'about'
         },
         {
-          name: 'footer' 
+          name: 'footer'
         },
         {
           name: 'premium_seating_qa'
@@ -77,6 +77,9 @@ module.exports = {
         },
         {
           name: 'transportation_qa'
+        },
+        {
+          name: 'stadium_policy'
         },
         {
           name: 'social_account'

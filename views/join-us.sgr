@@ -36,12 +36,32 @@ extends(src='layout.sgr')
         .block
           img(src='//{{ dato._meta.imgixHost + dato.join[0].seatingMapPricing[0].seatingMap.path }}?fm=jpeg&amp;fit=clamp&;w=1920&amp;h=1280')
 
-    section#audi-field-prev.tab.center-tab.full-band(style='background: url(https://{{ dato._meta.imgixHost + dato.join[0].audiFieldExpCenter[0].backgroundImage.path }}?fm=jpeg&amp;fit=crop&amp;w=1920&amp;h=1280)no-repeat center center; background-size: cover;')
+    section#stadium-policies.tab.center-tab.full-band
 
       header
         include(src='includes/_tab.sgr')
 
-        h2 {{ dato.join[0].audiFieldExpCenter[0].header }}
+        h2 {{ dato.stadium_policy[0].title }}
+
+      #faq-wrap
+
+        each(loop='policy in dato.stadium_policy[0].policy')
+
+          article
+            input(type='checkbox')
+
+            span
+            span
+
+            .faq-wrapper
+
+              h4 {{ policy.question }}
+
+              div.answer
+                p {{ policy.answer }}
+
+
+
 
     section#prev-center-gallery
 

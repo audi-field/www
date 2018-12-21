@@ -19,8 +19,6 @@ const checkScreenWidth = function () {
   }
 }
 
-// add comment to trigger build
-
 checkScreenWidth()
 
 // show nav menu when hamburger is clicked

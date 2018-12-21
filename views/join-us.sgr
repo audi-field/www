@@ -55,10 +55,10 @@ extends(src='layout.sgr')
 
             .faq-wrapper
 
-              h4 {{ policy.question }}
+              h4(md) {{ policy.question }}
 
               div.answer
-                p {{ policy.answer }}
+                p(md) {{ policy.answer }}
 
 
 
